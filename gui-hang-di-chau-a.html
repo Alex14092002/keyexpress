@@ -1,0 +1,3678 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="format-detection" content="telephone=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Gửi Hàng Đi Châu Á - Vận Tải Key Express</title>
+
+
+
+    <style id="critical-path-css" type="text/css">
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0
+        }
+
+        .page-preloader {
+            top: 0;
+            left: 0;
+            z-index: 999;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            text-align: center
+        }
+
+        .preloader-preview-area {
+            -webkit-animation-delay: -.2s;
+            animation-delay: -.2s;
+            top: 50%;
+            -webkit-transform: translateY(100%);
+            -ms-transform: translateY(100%);
+            transform: translateY(100%);
+            margin-top: 10px;
+            max-height: calc(50% - 20px);
+            opacity: 1;
+            width: 100%;
+            text-align: center;
+            position: absolute
+        }
+
+        .preloader-logo {
+            max-width: 90%;
+            top: 50%;
+            -webkit-transform: translateY(-100%);
+            -ms-transform: translateY(-100%);
+            transform: translateY(-100%);
+            margin: -10px auto 0 auto;
+            max-height: calc(50% - 20px);
+            opacity: 1;
+            position: relative
+        }
+
+        .ball-pulse>div {
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            margin: 2px;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            display: inline-block;
+            -webkit-animation: ball-pulse .75s infinite cubic-bezier(.2, .68, .18, 1.08);
+            animation: ball-pulse .75s infinite cubic-bezier(.2, .68, .18, 1.08)
+        }
+
+        .ball-pulse>div:nth-child(1) {
+            -webkit-animation-delay: -.36s;
+            animation-delay: -.36s
+        }
+
+        .ball-pulse>div:nth-child(2) {
+            -webkit-animation-delay: -.24s;
+            animation-delay: -.24s
+        }
+
+        .ball-pulse>div:nth-child(3) {
+            -webkit-animation-delay: -.12s;
+            animation-delay: -.12s
+        }
+
+        @-webkit-keyframes ball-pulse {
+            0% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                opacity: 1
+            }
+
+            45% {
+                -webkit-transform: scale(.1);
+                transform: scale(.1);
+                opacity: .7
+            }
+
+            80% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                opacity: 1
+            }
+        }
+
+        @keyframes ball-pulse {
+            0% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                opacity: 1
+            }
+
+            45% {
+                -webkit-transform: scale(.1);
+                transform: scale(.1);
+                opacity: .7
+            }
+
+            80% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                opacity: 1
+            }
+        }
+
+        .ball-clip-rotate-pulse {
+            position: relative;
+            -webkit-transform: translateY(-15px) translateX(-10px);
+            -ms-transform: translateY(-15px) translateX(-10px);
+            transform: translateY(-15px) translateX(-10px);
+            display: inline-block
+        }
+
+        .ball-clip-rotate-pulse>div {
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 100%
+        }
+
+        .ball-clip-rotate-pulse>div:first-child {
+            height: 36px;
+            width: 36px;
+            top: 7px;
+            left: -7px;
+            -webkit-animation: ball-clip-rotate-pulse-scale 1s 0s cubic-bezier(.09, .57, .49, .9) infinite;
+            animation: ball-clip-rotate-pulse-scale 1s 0s cubic-bezier(.09, .57, .49, .9) infinite
+        }
+
+        .ball-clip-rotate-pulse>div:last-child {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: -16px;
+            top: -2px;
+            background: 0 0;
+            border: 2px solid;
+            -webkit-animation: ball-clip-rotate-pulse-rotate 1s 0s cubic-bezier(.09, .57, .49, .9) infinite;
+            animation: ball-clip-rotate-pulse-rotate 1s 0s cubic-bezier(.09, .57, .49, .9) infinite;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s
+        }
+
+        @-webkit-keyframes ball-clip-rotate-pulse-rotate {
+            0% {
+                -webkit-transform: rotate(0) scale(1);
+                transform: rotate(0) scale(1)
+            }
+
+            50% {
+                -webkit-transform: rotate(180deg) scale(.6);
+                transform: rotate(180deg) scale(.6)
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg) scale(1);
+                transform: rotate(360deg) scale(1)
+            }
+        }
+
+        @keyframes ball-clip-rotate-pulse-rotate {
+            0% {
+                -webkit-transform: rotate(0) scale(1);
+                transform: rotate(0) scale(1)
+            }
+
+            50% {
+                -webkit-transform: rotate(180deg) scale(.6);
+                transform: rotate(180deg) scale(.6)
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg) scale(1);
+                transform: rotate(360deg) scale(1)
+            }
+        }
+
+        @-webkit-keyframes ball-clip-rotate-pulse-scale {
+            30% {
+                -webkit-transform: scale(.3);
+                transform: scale(.3)
+            }
+
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1)
+            }
+        }
+
+        @keyframes ball-clip-rotate-pulse-scale {
+            30% {
+                -webkit-transform: scale(.3);
+                transform: scale(.3)
+            }
+
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1)
+            }
+        }
+
+        @-webkit-keyframes square-spin {
+            25% {
+                -webkit-transform: perspective(100px) rotateX(180deg) rotateY(0);
+                transform: perspective(100px) rotateX(180deg) rotateY(0)
+            }
+
+            50% {
+                -webkit-transform: perspective(100px) rotateX(180deg) rotateY(180deg);
+                transform: perspective(100px) rotateX(180deg) rotateY(180deg)
+            }
+
+            75% {
+                -webkit-transform: perspective(100px) rotateX(0) rotateY(180deg);
+                transform: perspective(100px) rotateX(0) rotateY(180deg)
+            }
+
+            100% {
+                -webkit-transform: perspective(100px) rotateX(0) rotateY(0);
+                transform: perspective(100px) rotateX(0) rotateY(0)
+            }
+        }
+
+        @keyframes square-spin {
+            25% {
+                -webkit-transform: perspective(100px) rotateX(180deg) rotateY(0);
+                transform: perspective(100px) rotateX(180deg) rotateY(0)
+            }
+
+            50% {
+                -webkit-transform: perspective(100px) rotateX(180deg) rotateY(180deg);
+                transform: perspective(100px) rotateX(180deg) rotateY(180deg)
+            }
+
+            75% {
+                -webkit-transform: perspective(100px) rotateX(0) rotateY(180deg);
+                transform: perspective(100px) rotateX(0) rotateY(180deg)
+            }
+
+            100% {
+                -webkit-transform: perspective(100px) rotateX(0) rotateY(0);
+                transform: perspective(100px) rotateX(0) rotateY(0)
+            }
+        }
+
+        .square-spin {
+            display: inline-block
+        }
+
+        .square-spin>div {
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            width: 50px;
+            height: 50px;
+            -webkit-animation: square-spin 3s 0s cubic-bezier(.09, .57, .49, .9) infinite;
+            animation: square-spin 3s 0s cubic-bezier(.09, .57, .49, .9) infinite
+        }
+
+        .cube-transition {
+            position: relative;
+            -webkit-transform: translate(-25px, -25px);
+            -ms-transform: translate(-25px, -25px);
+            transform: translate(-25px, -25px);
+            display: inline-block
+        }
+
+        .cube-transition>div {
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            -webkit-animation: cube-transition 1.6s 0s infinite ease-in-out;
+            animation: cube-transition 1.6s 0s infinite ease-in-out
+        }
+
+        .cube-transition>div:last-child {
+            -webkit-animation-delay: -.8s;
+            animation-delay: -.8s
+        }
+
+        @-webkit-keyframes cube-transition {
+            25% {
+                -webkit-transform: translateX(50px) scale(.5) rotate(-90deg);
+                transform: translateX(50px) scale(.5) rotate(-90deg)
+            }
+
+            50% {
+                -webkit-transform: translate(50px, 50px) rotate(-180deg);
+                transform: translate(50px, 50px) rotate(-180deg)
+            }
+
+            75% {
+                -webkit-transform: translateY(50px) scale(.5) rotate(-270deg);
+                transform: translateY(50px) scale(.5) rotate(-270deg)
+            }
+
+            100% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg)
+            }
+        }
+
+        @keyframes cube-transition {
+            25% {
+                -webkit-transform: translateX(50px) scale(.5) rotate(-90deg);
+                transform: translateX(50px) scale(.5) rotate(-90deg)
+            }
+
+            50% {
+                -webkit-transform: translate(50px, 50px) rotate(-180deg);
+                transform: translate(50px, 50px) rotate(-180deg)
+            }
+
+            75% {
+                -webkit-transform: translateY(50px) scale(.5) rotate(-270deg);
+                transform: translateY(50px) scale(.5) rotate(-270deg)
+            }
+
+            100% {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg)
+            }
+        }
+
+        .ball-scale>div {
+            border-radius: 100%;
+            margin: 2px;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            display: inline-block;
+            height: 60px;
+            width: 60px;
+            -webkit-animation: ball-scale 1s 0s ease-in-out infinite;
+            animation: ball-scale 1s 0s ease-in-out infinite
+        }
+
+        @-webkit-keyframes ball-scale {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0)
+            }
+
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                opacity: 0
+            }
+        }
+
+        @keyframes ball-scale {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0)
+            }
+
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                opacity: 0
+            }
+        }
+
+        .line-scale>div {
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            display: inline-block;
+            width: 5px;
+            height: 50px;
+            border-radius: 2px;
+            margin: 2px
+        }
+
+        .line-scale>div:nth-child(1) {
+            -webkit-animation: line-scale 1s -.5s infinite cubic-bezier(.2, .68, .18, 1.08);
+            animation: line-scale 1s -.5s infinite cubic-bezier(.2, .68, .18, 1.08)
+        }
+
+        .line-scale>div:nth-child(2) {
+            -webkit-animation: line-scale 1s -.4s infinite cubic-bezier(.2, .68, .18, 1.08);
+            animation: line-scale 1s -.4s infinite cubic-bezier(.2, .68, .18, 1.08)
+        }
+
+        .line-scale>div:nth-child(3) {
+            -webkit-animation: line-scale 1s -.3s infinite cubic-bezier(.2, .68, .18, 1.08);
+            animation: line-scale 1s -.3s infinite cubic-bezier(.2, .68, .18, 1.08)
+        }
+
+        .line-scale>div:nth-child(4) {
+            -webkit-animation: line-scale 1s -.2s infinite cubic-bezier(.2, .68, .18, 1.08);
+            animation: line-scale 1s -.2s infinite cubic-bezier(.2, .68, .18, 1.08)
+        }
+
+        .line-scale>div:nth-child(5) {
+            -webkit-animation: line-scale 1s -.1s infinite cubic-bezier(.2, .68, .18, 1.08);
+            animation: line-scale 1s -.1s infinite cubic-bezier(.2, .68, .18, 1.08)
+        }
+
+        @-webkit-keyframes line-scale {
+            0% {
+                -webkit-transform: scaley(1);
+                transform: scaley(1)
+            }
+
+            50% {
+                -webkit-transform: scaley(.4);
+                transform: scaley(.4)
+            }
+
+            100% {
+                -webkit-transform: scaley(1);
+                transform: scaley(1)
+            }
+        }
+
+        @keyframes line-scale {
+            0% {
+                -webkit-transform: scaley(1);
+                transform: scaley(1)
+            }
+
+            50% {
+                -webkit-transform: scaley(.4);
+                transform: scaley(.4)
+            }
+
+            100% {
+                -webkit-transform: scaley(1);
+                transform: scaley(1)
+            }
+        }
+
+        .ball-scale-multiple {
+            position: relative;
+            -webkit-transform: translateY(30px);
+            -ms-transform: translateY(30px);
+            transform: translateY(30px);
+            display: inline-block
+        }
+
+        .ball-scale-multiple>div {
+            border-radius: 100%;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            margin: 2px;
+            position: absolute;
+            left: -30px;
+            top: 0;
+            opacity: 0;
+            margin: 0;
+            width: 50px;
+            height: 50px;
+            -webkit-animation: ball-scale-multiple 1s 0s linear infinite;
+            animation: ball-scale-multiple 1s 0s linear infinite
+        }
+
+        .ball-scale-multiple>div:nth-child(2) {
+            -webkit-animation-delay: -.2s;
+            animation-delay: -.2s
+        }
+
+        .ball-scale-multiple>div:nth-child(3) {
+            -webkit-animation-delay: -.2s;
+            animation-delay: -.2s
+        }
+
+        @-webkit-keyframes ball-scale-multiple {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+                opacity: 0
+            }
+
+            5% {
+                opacity: 1
+            }
+
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                opacity: 0
+            }
+        }
+
+        @keyframes ball-scale-multiple {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+                opacity: 0
+            }
+
+            5% {
+                opacity: 1
+            }
+
+            100% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                opacity: 0
+            }
+        }
+
+        .ball-pulse-sync {
+            display: inline-block
+        }
+
+        .ball-pulse-sync>div {
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            margin: 2px;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            display: inline-block
+        }
+
+        .ball-pulse-sync>div:nth-child(1) {
+            -webkit-animation: ball-pulse-sync .6s -.21s infinite ease-in-out;
+            animation: ball-pulse-sync .6s -.21s infinite ease-in-out
+        }
+
+        .ball-pulse-sync>div:nth-child(2) {
+            -webkit-animation: ball-pulse-sync .6s -.14s infinite ease-in-out;
+            animation: ball-pulse-sync .6s -.14s infinite ease-in-out
+        }
+
+        .ball-pulse-sync>div:nth-child(3) {
+            -webkit-animation: ball-pulse-sync .6s -70ms infinite ease-in-out;
+            animation: ball-pulse-sync .6s -70ms infinite ease-in-out
+        }
+
+        @-webkit-keyframes ball-pulse-sync {
+            33% {
+                -webkit-transform: translateY(10px);
+                transform: translateY(10px)
+            }
+
+            66% {
+                -webkit-transform: translateY(-10px);
+                transform: translateY(-10px)
+            }
+
+            100% {
+                -webkit-transform: translateY(0);
+                transform: translateY(0)
+            }
+        }
+
+        @keyframes ball-pulse-sync {
+            33% {
+                -webkit-transform: translateY(10px);
+                transform: translateY(10px)
+            }
+
+            66% {
+                -webkit-transform: translateY(-10px);
+                transform: translateY(-10px)
+            }
+
+            100% {
+                -webkit-transform: translateY(0);
+                transform: translateY(0)
+            }
+        }
+
+        .transparent-circle {
+            display: inline-block;
+            border-top: .5em solid rgba(255, 255, 255, .2);
+            border-right: .5em solid rgba(255, 255, 255, .2);
+            border-bottom: .5em solid rgba(255, 255, 255, .2);
+            border-left: .5em solid #fff;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-animation: transparent-circle 1.1s infinite linear;
+            animation: transparent-circle 1.1s infinite linear;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%
+        }
+
+        .transparent-circle:after {
+            border-radius: 50%;
+            width: 10em;
+            height: 10em
+        }
+
+        @-webkit-keyframes transparent-circle {
+            0% {
+                -webkit-transform: rotate(0);
+                transform: rotate(0)
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes transparent-circle {
+            0% {
+                -webkit-transform: rotate(0);
+                transform: rotate(0)
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg)
+            }
+        }
+
+        .ball-spin-fade-loader {
+            position: relative;
+            top: -10px;
+            left: -10px;
+            display: inline-block
+        }
+
+        .ball-spin-fade-loader>div {
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            margin: 2px;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            position: absolute;
+            -webkit-animation: ball-spin-fade-loader 1s infinite linear;
+            animation: ball-spin-fade-loader 1s infinite linear
+        }
+
+        .ball-spin-fade-loader>div:nth-child(1) {
+            top: 25px;
+            left: 0;
+            animation-delay: -.84s;
+            -webkit-animation-delay: -.84s
+        }
+
+        .ball-spin-fade-loader>div:nth-child(2) {
+            top: 17.05px;
+            left: 17.05px;
+            animation-delay: -.72s;
+            -webkit-animation-delay: -.72s
+        }
+
+        .ball-spin-fade-loader>div:nth-child(3) {
+            top: 0;
+            left: 25px;
+            animation-delay: -.6s;
+            -webkit-animation-delay: -.6s
+        }
+
+        .ball-spin-fade-loader>div:nth-child(4) {
+            top: -17.05px;
+            left: 17.05px;
+            animation-delay: -.48s;
+            -webkit-animation-delay: -.48s
+        }
+
+        .ball-spin-fade-loader>div:nth-child(5) {
+            top: -25px;
+            left: 0;
+            animation-delay: -.36s;
+            -webkit-animation-delay: -.36s
+        }
+
+        .ball-spin-fade-loader>div:nth-child(6) {
+            top: -17.05px;
+            left: -17.05px;
+            animation-delay: -.24s;
+            -webkit-animation-delay: -.24s
+        }
+
+        .ball-spin-fade-loader>div:nth-child(7) {
+            top: 0;
+            left: -25px;
+            animation-delay: -.12s;
+            -webkit-animation-delay: -.12s
+        }
+
+        .ball-spin-fade-loader>div:nth-child(8) {
+            top: 17.05px;
+            left: -17.05px;
+            animation-delay: 0s;
+            -webkit-animation-delay: 0s
+        }
+
+        @-webkit-keyframes ball-spin-fade-loader {
+            50% {
+                opacity: .3;
+                -webkit-transform: scale(.4);
+                transform: scale(.4)
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: scale(1);
+                transform: scale(1)
+            }
+        }
+
+        @keyframes ball-spin-fade-loader {
+            50% {
+                opacity: .3;
+                -webkit-transform: scale(.4);
+                transform: scale(.4)
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: scale(1);
+                transform: scale(1)
+            }
+        }
+    </style>
+
+
+    <!-- This site is optimized with the Yoast SEO Premium plugin v13.4.1 - https://yoast.com/wordpress/plugins/seo/ -->
+
+
+
+    <!-- / Yoast SEO Premium plugin. -->
+
+    <link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+
+
+    <link rel="shortcut icon" href="./images/logo.png" />
+    <link rel="alternate" type="application/rss+xml"
+        title="Nguồn cấp Vận Tải Khôi Minh &raquo; Vận chuyển hàng lẻ, hàng ghép Portfolio Category"
+        href="/portfolio_category/van-chuyen-hang-le-hang-ghep/feed/" />
+    <script type="text/javascript">
+        window.abb = {};
+        php = {};
+        window.PHP = {};
+        PHP.ajax = "/wp-admin/admin-ajax.php";
+        PHP.wp_p_id = "";
+        var mk_header_parallax, mk_banner_parallax, mk_page_parallax, mk_footer_parallax, mk_body_parallax;
+        var mk_images_dir = "/wp-content/themes/jupiter/assets/images",
+            mk_theme_js_path = "/wp-content/themes/jupiter/assets/js",
+            mk_theme_dir = "/wp-content/themes/jupiter",
+            mk_captcha_placeholder = "Enter Captcha",
+            mk_captcha_invalid_txt = "Invalid. Try again.",
+            mk_captcha_correct_txt = "Captcha correct.",
+            mk_responsive_nav_width = 1140,
+            mk_vertical_header_back = "Back",
+            mk_vertical_header_anim = "1",
+            mk_check_rtl = true,
+            mk_grid_width = 1140,
+            mk_ajax_search_option = "fullscreen_search",
+            mk_preloader_bg_color = "#fff",
+            mk_accent_color = "#0b56a5",
+            mk_go_to_top = "true",
+            mk_smooth_scroll = "true",
+            mk_preloader_bar_color = "#0b56a5",
+            mk_preloader_logo = "";
+        mk_typekit_id = "", mk_google_fonts = [], mk_global_lazyload = true;
+    </script>
+    <link rel='stylesheet' id='wp-block-library-css' href='/wp-includes/css/dist/block-library/style.min.css?ver=6.1.1'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='classic-theme-styles-css' href='/wp-includes/css/classic-themes.min.css?ver=1'
+        type='text/css' media='all' />
+    <style id='global-styles-inline-css' type='text/css'>
+        body {
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--cyan-bluish-gray: #abb8c3;
+            --wp--preset--color--white: #ffffff;
+            --wp--preset--color--pale-pink: #f78da7;
+            --wp--preset--color--vivid-red: #cf2e2e;
+            --wp--preset--color--luminous-vivid-orange: #ff6900;
+            --wp--preset--color--luminous-vivid-amber: #fcb900;
+            --wp--preset--color--light-green-cyan: #7bdcb5;
+            --wp--preset--color--vivid-green-cyan: #00d084;
+            --wp--preset--color--pale-cyan-blue: #8ed1fc;
+            --wp--preset--color--vivid-cyan-blue: #0693e3;
+            --wp--preset--color--vivid-purple: #9b51e0;
+            --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+            --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+            --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+            --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+            --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+            --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+            --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+            --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+            --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+            --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+            --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+            --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+            --wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');
+            --wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');
+            --wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');
+            --wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');
+            --wp--preset--duotone--midnight: url('#wp-duotone-midnight');
+            --wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');
+            --wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');
+            --wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');
+            --wp--preset--font-size--small: 13px;
+            --wp--preset--font-size--medium: 20px;
+            --wp--preset--font-size--large: 36px;
+            --wp--preset--font-size--x-large: 42px;
+            --wp--preset--spacing--20: 0.44rem;
+            --wp--preset--spacing--30: 0.67rem;
+            --wp--preset--spacing--40: 1rem;
+            --wp--preset--spacing--50: 1.5rem;
+            --wp--preset--spacing--60: 2.25rem;
+            --wp--preset--spacing--70: 3.38rem;
+            --wp--preset--spacing--80: 5.06rem;
+        }
+
+        :where(.is-layout-flex) {
+            gap: 0.5em;
+        }
+
+        body .is-layout-flow>.alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        body .is-layout-flow>.alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        body .is-layout-flow>.aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained>.alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        body .is-layout-constrained>.alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        body .is-layout-constrained>.aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+            max-width: var(--wp--style--global--content-size);
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained>.alignwide {
+            max-width: var(--wp--style--global--wide-size);
+        }
+
+        body .is-layout-flex {
+            display: flex;
+        }
+
+        body .is-layout-flex {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        body .is-layout-flex>* {
+            margin: 0;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        .has-black-color {
+            color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-color {
+            color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-color {
+            color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-color {
+            color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-color {
+            color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-color {
+            color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-color {
+            color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-color {
+            color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-color {
+            color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-color {
+            color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-color {
+            color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-color {
+            color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-background-color {
+            background-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-background-color {
+            background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-background-color {
+            background-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-background-color {
+            background-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-background-color {
+            background-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-background-color {
+            background-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-background-color {
+            background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-background-color {
+            background-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-border-color {
+            border-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-border-color {
+            border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-border-color {
+            border-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-border-color {
+            border-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-border-color {
+            border-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-border-color {
+            border-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-border-color {
+            border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-border-color {
+            border-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+            background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+        }
+
+        .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+            background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+        }
+
+        .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+        }
+
+        .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+            background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+        }
+
+        .has-cool-to-warm-spectrum-gradient-background {
+            background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+        }
+
+        .has-blush-light-purple-gradient-background {
+            background: var(--wp--preset--gradient--blush-light-purple) !important;
+        }
+
+        .has-blush-bordeaux-gradient-background {
+            background: var(--wp--preset--gradient--blush-bordeaux) !important;
+        }
+
+        .has-luminous-dusk-gradient-background {
+            background: var(--wp--preset--gradient--luminous-dusk) !important;
+        }
+
+        .has-pale-ocean-gradient-background {
+            background: var(--wp--preset--gradient--pale-ocean) !important;
+        }
+
+        .has-electric-grass-gradient-background {
+            background: var(--wp--preset--gradient--electric-grass) !important;
+        }
+
+        .has-midnight-gradient-background {
+            background: var(--wp--preset--gradient--midnight) !important;
+        }
+
+        .has-small-font-size {
+            font-size: var(--wp--preset--font-size--small) !important;
+        }
+
+        .has-medium-font-size {
+            font-size: var(--wp--preset--font-size--medium) !important;
+        }
+
+        .has-large-font-size {
+            font-size: var(--wp--preset--font-size--large) !important;
+        }
+
+        .has-x-large-font-size {
+            font-size: var(--wp--preset--font-size--x-large) !important;
+        }
+
+        .wp-block-navigation a:where(:not(.wp-element-button)) {
+            color: inherit;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        .wp-block-pullquote {
+            font-size: 1.5em;
+            line-height: 1.6;
+        }
+    </style>
+    <link rel='stylesheet' id='toc-screen-css' href='/wp-content/plugins/table-of-contents-plus/screen.min.css?ver=2106'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='theme-styles-css'
+        href='/wp-content/themes/jupiter/assets/stylesheet/min/full-styles.6.1.6.css?ver=1668066254' type='text/css'
+        media='all' />
+    <style id='theme-styles-inline-css' type='text/css'>
+        body {
+            background-color: #fff;
+        }
+
+        .hb-custom-header #mk-page-introduce,
+        .mk-header {
+            background-color: #f7f7f7;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+        }
+
+        .hb-custom-header>div,
+        .mk-header-bg {
+            background-color: #fff;
+        }
+
+        .mk-classic-nav-bg {
+            background-color: #fff;
+        }
+
+        .master-holder-bg {
+            background-color: #fff;
+        }
+
+        #mk-footer {
+            background-color: #0b56a5;
+        }
+
+        #mk-boxed-layout {
+            -webkit-box-shadow: 0 0 px rgba(0, 0, 0, );
+            -moz-box-shadow: 0 0 px rgba(0, 0, 0, );
+            box-shadow: 0 0 px rgba(0, 0, 0, );
+        }
+
+        .mk-news-tab .mk-tabs-tabs .is-active a,
+        .mk-fancy-title.pattern-style span,
+        .mk-fancy-title.pattern-style.color-gradient span:after,
+        .page-bg-color {
+            background-color: #fff;
+        }
+
+        .page-title {
+            font-size: 20px;
+            color: #000000;
+            text-transform: uppercase;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+
+        .page-subtitle {
+            font-size: 14px;
+            line-height: 100%;
+            color: #000000;
+            font-size: 14px;
+            text-transform: none;
+        }
+
+        .mk-header {
+            border-bottom: 1px solid #ededed;
+        }
+
+        .header-style-1 .mk-header-padding-wrapper,
+        .header-style-2 .mk-header-padding-wrapper,
+        .header-style-3 .mk-header-padding-wrapper {
+            padding-top: 126px;
+        }
+
+        .mk-process-steps[max-width~="950px"] ul::before {
+            display: none !important;
+        }
+
+        .mk-process-steps[max-width~="950px"] li {
+            margin-bottom: 30px !important;
+            width: 100% !important;
+            text-align: center;
+        }
+
+        .mk-event-countdown-ul[max-width~="750px"] li {
+            width: 90%;
+            display: block;
+            margin: 0 auto 15px;
+        }
+
+        .compose-mode .vc_element-name .vc_btn-content {
+            height: auto !important;
+        }
+
+        @font-face {
+            font-family: 'star';
+            src: url('/wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.eot');
+            src: url('/wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.eot?#iefix') format('embedded-opentype'), url('/wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.woff') format('woff'), url('/wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.ttf') format('truetype'), url('/wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.svg#star') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'WooCommerce';
+            src: url('/wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.eot');
+            src: url('/wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.eot?#iefix') format('embedded-opentype'), url('/wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.woff') format('woff'), url('/wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.ttf') format('truetype'), url('/wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.svg#WooCommerce') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+    <link rel='stylesheet' id='mkhb-render-css'
+        href='/wp-content/themes/jupiter/header-builder/includes/assets/css/mkhb-render.css?ver=6.1.6' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='mkhb-row-css'
+        href='/wp-content/themes/jupiter/header-builder/includes/assets/css/mkhb-row.css?ver=6.1.6' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='mkhb-column-css'
+        href='/wp-content/themes/jupiter/header-builder/includes/assets/css/mkhb-column.css?ver=6.1.6' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='theme-options-css'
+        href='/wp-content/uploads/mk_assets/theme-options-production-1669193737.css?ver=1669193737' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='ms-main-css'
+        href='/wp-content/plugins/masterslider/public/assets/css/masterslider.main.css?ver=3.2.2' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='ms-custom-css' href='/wp-content/uploads/masterslider/custom.css?ver=1.7' type='text/css'
+        media='all' />
+    <script type='text/javascript'
+        src='/wp-content/themes/jupiter/assets/js/plugins/wp-enqueue/min/webfontloader.js?ver=6.1.1'
+        id='mk-webfontloader-js'></script>
+    <script type='text/javascript' id='mk-webfontloader-js-after'>
+        WebFontConfig = {
+            timeout: 2000
+        }
+
+        if (mk_typekit_id.length > 0) {
+            WebFontConfig.typekit = {
+                id: mk_typekit_id
+            }
+        }
+
+        if (mk_google_fonts.length > 0) {
+            WebFontConfig.google = {
+                families: mk_google_fonts
+            }
+        }
+
+        if ((mk_google_fonts.length > 0 || mk_typekit_id.length > 0) && navigator.userAgent.indexOf("Speed Insights") == -1) {
+            WebFont.load(WebFontConfig);
+        }
+    </script>
+    <script type='text/javascript' src='/wp-includes/js/jquery/jquery.min.js?ver=3.6.1' id='jquery-core-js'></script>
+    <script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2'
+        id='jquery-migrate-js'></script>
+    <link rel="https://api.w.org/" href="/wp-json/" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" />
+    <meta name="generator" content="WordPress 6.1.1" />
+    <script>
+        var ms_grabbing_curosr = '/wp-content/plugins/masterslider/public/assets/css/common/grabbing.cur',
+            ms_grab_curosr = '/wp-content/plugins/masterslider/public/assets/css/common/grab.cur';
+    </script>
+    <meta name="generator" content="MasterSlider 3.2.2 - Responsive Touch Image Slider" />
+    <script>
+        var isTest = false;
+    </script>
+    <meta itemprop="author" content="admin" />
+    <meta itemprop="datePublished" content="11/11/2022" />
+    <meta itemprop="dateModified" content="22/11/2022" />
+    <meta itemprop="publisher" content="Vận Tải Khôi Minh" />
+    <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress." />
+    <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="/wp-content/plugins/js_composer_theme/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]-->
+    <style type="text/css" id="wp-custom-css">
+        .master-holder h4 {
+            color: #0b56a5 !important;
+            text-transform: none !important;
+        }
+
+        .wpb_row.vc_inner.vc_row.vc_row-fluid.hoaidanhbox1.attched-false .vc_column_container>.vc_column-inner {
+            border-radius: 10px;
+        }
+
+        .wpb_row.vc_inner.vc_row.vc_row-fluid.hoaidanhbox1.attched-false .wpb_column.vc_column_container.vc_col-sm-3.vc_col-has-fill {
+            padding: 7px;
+        }
+
+        .portfolio-meta-wrapper {
+            padding: 5px;
+        }
+
+        .portfolio-meta-wrapper .the-title a {
+            text-transform: none;
+            letter-spacing: 1px;
+            color: #0b56a5;
+        }
+
+        .mk-header-toolbar-holder {
+            font-weight: 600;
+        }
+
+        .mk-header-toolbar .mk-header-social svg {
+            fill: #fbfbfb;
+        }
+
+        .widget_social_networks a.dark,
+        .widget_social_networks a.dark:hover {
+            color: #fff;
+        }
+
+        .widget_social_networks a {
+            position: relative;
+            display: inline-block;
+            margin: 5px 15px 5px 0;
+            line-height: 100%;
+            opacity: unset !important;
+            transition: all .2s ease;
+        }
+
+        #nf-form-2-cont {
+            border: 1px solid #cfcaca;
+            padding: 11px;
+            border-radius: 10px;
+            box-shadow: 0 10px 28px rgba(234, 166, 36, 0.71), 0 10px 10px rgba(13, 133, 219, 0);
+        }
+
+        .social_footer1 img {
+            width: 38px;
+        }
+
+        .baosocial {
+            display: flex;
+            position: fixed;
+            top: 50px;
+            left: 5px;
+            width: 58px;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #mk-sidebar div.widgettitle {
+            background-color: #1041a8;
+            text-align: center;
+            color: white;
+            padding: 5px !important;
+        }
+
+        #mk-page-introduce {
+            background-image: url(/wp-content/uploads/2022/11/jklhj.jpg);
+        }
+
+        .page-title {
+            font-size: 26px;
+            color: #fbfbfb;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .nf-form-content button,
+        .nf-form-content input[type=button],
+        .nf-form-content input[type=submit] {
+            background: #e51e25 !important;
+            border: 0;
+            color: 009e2f7;
+            transition: all .5s;
+            width: 100% !important;
+        }
+
+        div {
+            font-family: 'Francois One', sans-serif;
+        }
+
+        .nf-form-content .listselect-wrap .nf-field-element div,
+        .nf-form-content input.ninja-forms-field,
+        .nf-form-content select.ninja-forms-field:not([multiple]) {
+            height: 37px !important;
+        }
+
+        #nf-form-2-cont h3 {
+            text-align: center;
+            font-weight: 600;
+            font-size: 22px;
+        }
+
+        a {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        }
+
+        .widgettitle {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        }
+
+        p {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        }
+
+        .master-holder h3 {
+            font-size: 24px;
+            color: #404040;
+            font-weight: 600;
+            text-transform: none !important;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        }
+
+        .ms-container {
+            margin-top: -58px;
+        }
+
+        ._self {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        }
+
+        .pt-cv-content {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        }
+
+        .quick-alo-phone.quick-alo-static {
+            opacity: .6;
+        }
+
+        .quick-alo-phone.quick-alo-hover,
+        .quick-alo-phone:hover {
+            opacity: 1;
+        }
+
+        .quick-alo-phone.quick-alo-active .quick-alo-ph-circle {
+            -webkit-animation: quick-alo-circle-anim 1.1s infinite ease-in-out !important;
+            -moz-animation: quick-alo-circle-anim 1.1s infinite ease-in-out !important;
+            -ms-animation: quick-alo-circle-anim 1.1s infinite ease-in-out !important;
+            -o-animation: quick-alo-circle-anim 1.1s infinite ease-in-out !important;
+            animation: quick-alo-circle-anim 1.1s infinite ease-in-out !important;
+        }
+
+        .quick-alo-phone.quick-alo-static .quick-alo-ph-circle {
+            -webkit-animation: quick-alo-circle-anim 2.2s infinite ease-in-out !important;
+            -moz-animation: quick-alo-circle-anim 2.2s infinite ease-in-out !important;
+            -ms-animation: quick-alo-circle-anim 2.2s infinite ease-in-out !important;
+            -o-animation: quick-alo-circle-anim 2.2s infinite ease-in-out !important;
+            animation: quick-alo-circle-anim 2.2s infinite ease-in-out !important;
+        }
+
+        .quick-alo-phone.quick-alo-hover .quick-alo-ph-circle,
+        .quick-alo-phone:hover .quick-alo-ph-circle {
+            border-color: green;
+            opacity: .5;
+        }
+
+        .quick-alo-phone.quick-alo-green.quick-alo-hover .quick-alo-ph-circle,
+        .quick-alo-phone.quick-alo-green:hover .quick-alo-ph-circle {
+            border-color: red;
+            border-color: red 9;
+            opacity: .5;
+        }
+
+        .quick-alo-phone.quick-alo-green .quick-alo-ph-circle {
+            border-color: green;
+            border-color: #bfebfc 9;
+            opacity: .5;
+        }
+
+        .quick-alo-phone.quick-alo-gray.quick-alo-hover .quick-alo-ph-circle,
+        .quick-alo-phone.quick-alo-gray:hover .quick-alo-ph-circle {
+            border-color: #ccc;
+            opacity: .5;
+        }
+
+        .quick-alo-phone.quick-alo-gray .quick-alo-ph-circle {
+            border-color: #75eb50;
+            opacity: .5;
+        }
+
+        .quick-alo-ph-circle-fill {
+            width: 60px;
+            height: 60px;
+            top: 60px;
+            left: 60px;
+            position: absolute;
+            background-color: #000;
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            border-radius: 100%;
+            border: 2px solid transparent;
+            opacity: .1;
+            -webkit-animation: quick-alo-circle-fill-anim 2.3s infinite ease-in-out;
+            -moz-animation: quick-alo-circle-fill-anim 2.3s infinite ease-in-out;
+            -ms-animation: quick-alo-circle-fill-anim 2.3s infinite ease-in-out;
+            -o-animation: quick-alo-circle-fill-anim 2.3s infinite ease-in-out;
+            animation: quick-alo-circle-fill-anim 2.3s infinite ease-in-out;
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all .5s;
+            -webkit-transform-origin: 50% 50%;
+            -moz-transform-origin: 50% 50%;
+            -ms-transform-origin: 50% 50%;
+            -o-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+        }
+
+        .quick-alo-phone.quick-alo-active .quick-alo-ph-circle-fill {
+            -webkit-animation: quick-alo-circle-fill-anim 1.7s infinite ease-in-out !important;
+            -moz-animation: quick-alo-circle-fill-anim 1.7s infinite ease-in-out !important;
+            -ms-animation: quick-alo-circle-fill-anim 1.7s infinite ease-in-out !important;
+            -o-animation: quick-alo-circle-fill-anim 1.7s infinite ease-in-out !important;
+            animation: quick-alo-circle-fill-anim 1.7s infinite ease-in-out !important;
+        }
+
+        .quick-alo-phone.quick-alo-static .quick-alo-ph-circle-fill {
+            -webkit-animation: quick-alo-circle-fill-anim 2.3s infinite ease-in-out !important;
+            -moz-animation: quick-alo-circle-fill-anim 2.3s infinite ease-in-out !important;
+            -ms-animation: quick-alo-circle-fill-anim 2.3s infinite ease-in-out !important;
+            -o-animation: quick-alo-circle-fill-anim 2.3s infinite ease-in-out !important;
+            animation: quick-alo-circle-fill-anim 2.3s infinite ease-in-out !important;
+            opacity: 0 !important;
+        }
+
+        .quick-alo-phone.quick-alo-hover .quick-alo-ph-circle-fill,
+        .quick-alo-phone:hover .quick-alo-ph-circle-fill {
+            background-color: rgba(0, 175, 242, 0.5);
+            background-color: green 9;
+            opacity: .75 !important;
+        }
+
+        .quick-alo-phone.quick-alo-green.quick-alo-hover .quick-alo-ph-circle-fill,
+        .quick-alo-phone.quick-alo-green:hover .quick-alo-ph-circle-fill {
+            background-color: rgba(117, 235, 80, 0.5);
+            background-color: #baf5a7 9;
+            opacity: .75 !important;
+        }
+
+        .quick-alo-phone.quick-alo-green .quick-alo-ph-circle-fill {
+            background-color: rgba(0, 175, 242, 0.5);
+            background-color: #a6e3fa 9;
+            opacity: .75 !important;
+        }
+
+        .quick-alo-phone.quick-alo-gray.quick-alo-hover .quick-alo-ph-circle-fill,
+        .quick-alo-phone.quick-alo-gray:hover .quick-alo-ph-circle-fill {
+            background-color: rgba(204, 204, 204, 0.5);
+            background-color: #ccc 9;
+            opacity: .75 !important;
+        }
+
+        .quick-alo-phone.quick-alo-gray .quick-alo-ph-circle-fill {
+            background-color: rgba(117, 235, 80, 0.5);
+            opacity: .75 !important;
+        }
+
+        .quick-alo-ph-img-circle {
+            width: 40px;
+            height: 40px;
+            top: 70px;
+            left: 70px;
+            position: absolute;
+            background: rgba(30, 30, 30, 0.1) url("http://i.imgur.com/sM1nubF.png") no-repeat center center;
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            border-radius: 100%;
+            border: 2px solid transparent;
+            opacity: .7;
+            -webkit-animation: quick-alo-circle-img-anim 1s infinite ease-in-out;
+            -moz-animation: quick-alo-circle-img-anim 1s infinite ease-in-out;
+            -ms-animation: quick-alo-circle-img-anim 1s infinite ease-in-out;
+            -o-animation: quick-alo-circle-img-anim 1s infinite ease-in-out;
+            animation: quick-alo-circle-img-anim 1s infinite ease-in-out;
+            -webkit-transform-origin: 50% 50%;
+            -moz-transform-origin: 50% 50%;
+            -ms-transform-origin: 50% 50%;
+            -o-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+        }
+
+        .quick-alo-phone.quick-alo-active .quick-alo-ph-img-circle {
+            -webkit-animation: quick-alo-circle-img-anim 1s infinite ease-in-out !important;
+            -moz-animation: quick-alo-circle-img-anim 1s infinite ease-in-out !important;
+            -ms-animation: quick-alo-circle-img-anim 1s infinite ease-in-out !important;
+            -o-animation: quick-alo-circle-img-anim 1s infinite ease-in-out !important;
+            animation: quick-alo-circle-img-anim 1s infinite ease-in-out !important;
+        }
+
+        .quick-alo-phone.quick-alo-static .quick-alo-ph-img-circle {
+            -webkit-animation: quick-alo-circle-img-anim 0s infinite ease-in-out !important;
+            -moz-animation: quick-alo-circle-img-anim 0s infinite ease-in-out !important;
+            -ms-animation: quick-alo-circle-img-anim 0s infinite ease-in-out !important;
+            -o-animation: quick-alo-circle-img-anim 0s infinite ease-in-out !important;
+            animation: quick-alo-circle-img-anim 0s infinite ease-in-out !important;
+        }
+
+        .quick-alo-phone.quick-alo-hover .quick-alo-ph-img-circle,
+        .quick-alo-phone:hover .quick-alo-ph-img-circle {
+            background-color: green;
+        }
+
+        .quick-alo-phone.quick-alo-green.quick-alo-hover .quick-alo-ph-img-circle,
+        .quick-alo-phone.quick-alo-green:hover .quick-alo-ph-img-circle {
+            background-color: red;
+            background-color: red 9;
+        }
+
+        .quick-alo-phone.quick-alo-green .quick-alo-ph-img-circle {
+            background-color: green;
+            background-color: green 9;
+        }
+
+        .quick-alo-phone.quick-alo-gray.quick-alo-hover .quick-alo-ph-img-circle,
+        .quick-alo-phone.quick-alo-gray:hover .quick-alo-ph-img-circle {
+            background-color: #ccc;
+        }
+
+        .quick-alo-phone.quick-alo-gray .quick-alo-ph-img-circle {
+            background-color: #75eb50;
+        }
+
+        @-moz-keyframes quick-alo-circle-anim {
+            0% {
+                -moz-transform: rotate(0) scale(.5) skew(1deg);
+                opacity: .1;
+                -moz-opacity: .1;
+                -webkit-opacity: .1;
+                -o-opacity: .1;
+            }
+
+            30% {
+                -moz-transform: rotate(0) scale(.7) skew(1deg);
+                opacity: .5;
+                -moz-opacity: .5;
+                -webkit-opacity: .5;
+                -o-opacity: .5;
+            }
+
+            100% {
+                -moz-transform: rotate(0) scale(1) skew(1deg);
+                opacity: .6;
+                -moz-opacity: .6;
+                -webkit-opacity: .6;
+                -o-opacity: .1;
+            }
+        }
+
+        @-webkit-keyframes quick-alo-circle-anim {
+            0% {
+                -webkit-transform: rotate(0) scale(.5) skew(1deg);
+                -webkit-opacity: .1;
+            }
+
+            30% {
+                -webkit-transform: rotate(0) scale(.7) skew(1deg);
+                -webkit-opacity: .5;
+            }
+
+            100% {
+                -webkit-transform: rotate(0) scale(1) skew(1deg);
+                -webkit-opacity: .1;
+            }
+        }
+
+        @-o-keyframes quick-alo-circle-anim {
+            0% {
+                -o-transform: rotate(0) kscale(.5) skew(1deg);
+                -o-opacity: .1;
+            }
+
+            30% {
+                -o-transform: rotate(0) scale(.7) skew(1deg);
+                -o-opacity: .5;
+            }
+
+            100% {
+                -o-transform: rotate(0) scale(1) skew(1deg);
+                -o-opacity: .1;
+            }
+        }
+
+        @-moz-keyframes quick-alo-circle-fill-anim {
+            0% {
+                -moz-transform: rotate(0) scale(.7) skew(1deg);
+                opacity: .2;
+            }
+
+            50% {
+                -moz-transform: rotate(0) -moz-scale(1) skew(1deg);
+                opacity: .2;
+            }
+
+            100% {
+                -moz-transform: rotate(0) scale(.7) skew(1deg);
+                opacity: .2;
+            }
+        }
+
+        @-webkit-keyframes quick-alo-circle-fill-anim {
+            0% {
+                -webkit-transform: rotate(0) scale(.7) skew(1deg);
+                opacity: .2;
+            }
+
+            50% {
+                -webkit-transform: rotate(0) scale(1) skew(1deg);
+                opacity: .2;
+            }
+
+            100% {
+                -webkit-transform: rotate(0) scale(.7) skew(1deg);
+                opacity: .2;
+            }
+        }
+
+        @-o-keyframes quick-alo-circle-fill-anim {
+            0% {
+                -o-transform: rotate(0) scale(.7) skew(1deg);
+                opacity: .2;
+            }
+
+            50% {
+                -o-transform: rotate(0) scale(1) skew(1deg);
+                opacity: .2;
+            }
+
+            100% {
+                -o-transform: rotate(0) scale(.7) skew(1deg);
+                opacity: .2;
+            }
+        }
+
+        @-moz-keyframes quick-alo-circle-img-anim {
+            10% {
+                transform: rotate(0) scale(1) skew(1deg);
+            }
+
+            10% {
+                -moz-transform: rotate(-25deg) scale(1) skew(1deg);
+            }
+
+            20% {
+                -moz-transform: rotate(25deg) scale(1) skew(1deg);
+            }
+
+            30% {
+                -moz-transform: rotate(-25deg) scale(1) skew(1deg);
+            }
+
+            40% {
+                -moz-transform: rotate(25deg) scale(1) skew(1deg);
+            }
+
+            50% {
+                -moz-transform: rotate(0) scale(1) skew(1deg);
+            }
+
+            100% {
+                -moz-transform: rotate(0) scale(1) skew(1deg);
+            }
+        }
+
+        @-webkit-keyframes quick-alo-circle-img-anim {
+            0% {
+                -webkit-transform: rotate(0) scale(1) skew(1deg);
+            }
+
+            10% {
+                -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+            }
+
+            20% {
+                -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+            }
+
+            30% {
+                -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+            }
+
+            40% {
+                -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+            }
+
+            50% {
+                -webkit-transform: rotate(0) scale(1) skew(1deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(0) scale(1) skew(1deg);
+            }
+        }
+
+        @-o-keyframes quick-alo-circle-img-anim {
+            0% {
+                -o-transform: rotate(0) scale(1) skew(1deg);
+            }
+
+            10% {
+                -o-transform: rotate(-25deg) scale(1) skew(1deg);
+            }
+
+            20% {
+                -o-transform: rotate(25deg) scale(1) skew(1deg);
+            }
+
+            30% {
+                -o-transform: rotate(-25deg) scale(1) skew(1deg);
+            }
+
+            40% {
+                -o-transform: rotate(25deg) scale(1) skew(1deg);
+            }
+
+            50% {
+                -o-transform: rotate(0) scale(1) skew(1deg);
+            }
+
+            100% {
+                -o-transform: rotate(0) scale(1) skew(1deg);
+            }
+        }
+
+        .quick-alo-phone {
+            position: fixed;
+        }
+
+        @media only screen and (max-width: 768px) {
+            #text-block-28 {
+                padding: 0px 10px 0px 10px;
+                text-align: justify !important;
+            }
+
+            #text-block-6 p {
+                text-align: justify;
+            }
+
+            .wpb_row.vc_row.vc_row-fluid.mk-fullwidth-false.attched-false.js-master-row.mk-grid .vc_col-sm-6.wpb_column.column_container._.height-full {
+                padding: 0px 10px 0px 10px !important;
+            }
+
+            #padding-4 {
+                height: 10px !important;
+            }
+
+            .header-logo a img {
+                max-width: 265px;
+            }
+
+            .nf-form-wrap.ninja-forms-form-wrap {
+                padding: unset;
+            }
+
+            .woocommerce-page.columns-2 ul.products li.product,
+            .woocommerce-page.columns-3 ul.products li.product,
+            .woocommerce-page.columns-4 ul.products li.product,
+            .woocommerce-page.columns-5 ul.products li.product,
+            .woocommerce-page.columns-6 ul.products li.product,
+            .woocommerce.columns-2 ul.products li.product,
+            .woocommerce.columns-3 ul.products li.product,
+            .woocommerce.columns-4 ul.products li.product,
+            .woocommerce.columns-5 ul.products li.product,
+            .woocommerce.columns-6 ul.products li.product {
+                width: calc(50% - 30px) !important;
+            }
+
+            .mk-header-toolbar {
+                display: block !important;
+            }
+
+            .mk-header-social.toolbar-section {
+                display: none !important;
+            }
+
+            #mk-header-searchform {
+                display: none;
+            }
+
+            .header-toolbar-contact {
+                display: none !important;
+            }
+
+            .wpb_row.vc_inner.vc_row.vc_row-fluid.hoaidanhbox1.attched-false .wpb_column.vc_column_container.vc_col-sm-3.vc_col-has-fill {
+                padding: unset;
+            }
+
+            .portfolio-meta-wrapper {
+                padding: unset;
+            }
+
+            .wpb_row.vc_row.vc_row-fluid.mk-fullwidth-true.attched-false.hoaidanhdddd.js-master-row.mk-in-viewport .vc_col-lg-1,
+            .vc_col-lg-10,
+            .vc_col-lg-11,
+            .vc_col-lg-12,
+            .vc_col-lg-2,
+            .vc_col-lg-3,
+            .vc_col-lg-4,
+            .vc_col-lg-5,
+            .vc_col-lg-6,
+            .vc_col-lg-7,
+            .vc_col-lg-8,
+            .vc_col-lg-9,
+            .vc_col-md-1,
+            .vc_col-md-10,
+            .vc_col-md-11,
+            .vc_col-md-12,
+            .vc_col-md-2,
+            .vc_col-md-3,
+            .vc_col-md-4,
+            .vc_col-md-5,
+            .vc_col-md-6,
+            .vc_col-md-7,
+            .vc_col-md-8,
+            .vc_col-md-9,
+            .vc_col-sm-1,
+            .vc_col-sm-10,
+            .vc_col-sm-11,
+            .vc_col-sm-12,
+            .vc_col-sm-2,
+            .vc_col-sm-3,
+            .vc_col-sm-4,
+            .vc_col-sm-5,
+            .vc_col-sm-6,
+            .vc_col-sm-7,
+            .vc_col-sm-8,
+            .vc_col-sm-9,
+            .vc_col-xs-1,
+            .vc_col-xs-10,
+            .vc_col-xs-11,
+            .vc_col-xs-12,
+            .vc_col-xs-2,
+            .vc_col-xs-3,
+            .vc_col-xs-4,
+            .vc_col-xs-5,
+            .vc_col-xs-6,
+            .vc_col-xs-7,
+            .vc_col-xs-8,
+            .vc_col-xs-9 {
+                position: relative;
+                min-height: 1px;
+                padding-left: 0px;
+                padding-right: 0px !important;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            .wpb_column.vc_column_container.vc_col-sm-3.vc_col-has-fill {
+                padding: 5px !important;
+            }
+        }
+    </style>
+    <meta name="generator" content="Jupiter 6.1.6" /><noscript>
+        <style type="text/css">
+            .wpb_animate_when_almost_visible {
+                opacity: 1;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body
+    class="archive tax-portfolio_category term-van-chuyen-hang-le-hang-ghep term-14 _masterslider _msp_version_3.2.2 wpb-js-composer js-comp-ver-5.4.5 vc_responsive"
+    itemscope="itemscope" itemtype="https://schema.org/WebPage" data-adminbar="">
+
+
+    <div class="hotline-phone-ring-wrap">
+        <div class="hotline-phone-ring">
+            <div class="hotline-phone-ring-circle"></div>
+            <div class="hotline-phone-ring-circle-fill"></div>
+            <div class="hotline-phone-ring-img-circle"> <a href="tel:0979633975" class="pps-btn-img"> <img src="https://netweb.vn/img/hotline/icon.png" alt="so dien thoai" width="50"> </a></div>
+        </div>
+        <div class="hotline-bar">
+            <a href="tel:0979633975"> <span class="text-hotline">0979.633.975</span> </a>
+        </div>
+    
+    </div>
+    <div class="float-icon-hotline">			
+		<ul class ="left-icon hotline">
+			<li class="hotline_float_icon"><a target="_blank" rel="nofollow" id="messengerButton" href="https://zalo.me/0979633975"><i class="fa fa-zalo animated infinite tada"></i><span>Zalo</span></a></li>
+			<li class="hotline_float_icon"><a target="_blank" rel="nofollow" id="messengerButton" href="https://www.facebook.com/profile.php?id=100035179759189"><i class="fa fa-messenger animated infinite tada"></i><span>Facebook</span></a></li>
+		</ul>		
+</div>
+    <!-- Target for scroll anchors to achieve native browser bahaviour + possible enhancements like smooth scrolling -->
+    <div id="top-of-page"></div>
+
+    <div id="mk-boxed-layout">
+
+        <div id="mk-theme-container">
+
+
+            <header data-height='90' data-sticky-height='55' data-responsive-height='90' data-transparent-skin=''
+            data-header-style='1' data-sticky-style='fixed' data-sticky-offset='header' id="mk-header-1"
+            class="mk-header header-style-1 header-align-left  toolbar-true menu-hover-5 sticky-style-fixed mk-background-stretch boxed-header "
+            role="banner" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
+            <div class="mk-header-holder">
+
+                <div class="mk-header-toolbar">
+
+                    <div class="mk-grid header-grid">
+
+                        <div class="mk-header-toolbar-holder">
+
+                            <div class="mk-header-social toolbar-section">
+                                <ul>
+                                    <li><a class="facebook-hover " target="_blank" href="#"><svg class="mk-svg-icon"
+                                                data-name="mk-jupiter-icon-facebook"
+                                                data-cacheid="icon-63e3050907d50"
+                                                style=" height:16px; width: 16px; "
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path
+                                                    d="M256-6.4c-141.385 0-256 114.615-256 256s114.615 256 256 256 256-114.615 256-256-114.615-256-256-256zm64.057 159.299h-49.041c-7.42 0-14.918 7.452-14.918 12.99v19.487h63.723c-2.081 28.41-6.407 64.679-6.407 64.679h-57.566v159.545h-63.929v-159.545h-32.756v-64.474h32.756v-33.53c0-8.098-1.706-62.336 70.46-62.336h57.678v63.183z" />
+                                            </svg></i></a></li>
+                                    <li><a class="youtube-hover " target="_blank" href="#"><svg class="mk-svg-icon"
+                                                data-name="mk-jupiter-icon-youtube"
+                                                data-cacheid="icon-63e3050907f5d"
+                                                style=" height:16px; width: 16px; "
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path
+                                                    d="M202.48 284.307v-14.152l-56.999-.098v13.924l17.791.053v95.84h17.835l-.013-95.567h21.386zm24.889 65.266c0 7.385.448 11.076-.017 12.377-1.446 3.965-7.964 8.156-10.513.43-.427-1.353-.049-5.44-.049-12.447l-.07-51.394h-17.734l.053 50.578c.022 7.752-.172 13.537.061 16.164.44 4.644.286 10.049 4.584 13.133 8.026 5.793 23.391-.861 27.24-9.123l-.04 10.547 14.319.019v-81.318h-17.835v51.035zm46.259-47.854l.062-31.592-17.809.035-.089 109.006 14.645-.219 1.335-6.785c18.715 17.166 30.485 5.404 30.458-15.174l-.035-42.49c-.017-16.183-12.129-25.887-28.567-12.781zm15.364 58.35c0 3.524-3.515 6.39-7.805 6.39s-7.797-2.867-7.797-6.39v-47.695c0-3.526 3.507-6.408 7.797-6.408 4.289 0 7.805 2.883 7.805 6.408v47.695zm-36.294-164.046c4.343 0 7.876-3.912 7.876-8.698v-44.983c0-4.778-3.532-8.684-7.876-8.684-4.338 0-7.903 3.906-7.903 8.684v44.984c0 4.786 3.565 8.698 7.903 8.698zm3.302-202.423c-141.385 0-256 114.615-256 256s114.615 256 256 256 256-114.615 256-256-114.615-256-256-256zm31.394 129.297h16.34v65.764c0 3.564 2.935 6.473 6.505 6.473 3.586 0 6.512-2.909 6.512-6.473v-65.764h15.649v84.5h-19.866l.334-6.996c-1.354 2.844-3.024 4.971-5.001 6.399-1.988 1.433-4.255 2.127-6.83 2.127-2.928 0-5.381-.681-7.297-2.026-1.933-1.366-3.366-3.178-4.29-5.418-.915-2.26-1.476-4.602-1.705-7.037-.219-2.457-.351-7.295-.351-14.556v-56.991zm-48.83.883c3.511-2.769 8.003-4.158 13.471-4.158 4.592 0 8.539.901 11.826 2.673 3.305 1.771 5.854 4.083 7.631 6.931 1.801 2.856 3.022 5.793 3.673 8.799.66 3.046.994 7.643.994 13.836v21.369c0 7.84-.317 13.606-.923 17.267-.599 3.67-1.908 7.072-3.912 10.272-1.988 3.156-4.544 5.52-7.647 7.028-3.137 1.516-6.733 2.259-10.786 2.259-4.531 0-8.341-.619-11.488-1.933-3.156-1.292-5.59-3.261-7.331-5.858-1.754-2.594-2.985-5.772-3.727-9.468-.756-3.7-1.113-9.26-1.113-16.666v-22.371c0-8.113.685-14.446 2.026-19.012 1.345-4.549 3.78-8.211 7.305-10.966zm-52.06-34.18l11.946 41.353 11.77-41.239h20.512l-22.16 55.523-.023 64.81h-18.736l-.031-64.788-23.566-55.659h20.287zm197.528 280.428c0 21.764-18.882 39.572-41.947 39.572h-172.476c-23.078 0-41.951-17.808-41.951-39.572v-90.733c0-21.755 18.873-39.573 41.951-39.573h172.476c23.065 0 41.947 17.819 41.947 39.573v90.733zm-39.38-18.602l-.034 1.803v7.453c0 4-3.297 7.244-7.298 7.244h-2.619c-4.015 0-7.313-3.244-7.313-7.244v-19.61h30.617v-11.515c0-8.42-.229-16.832-.924-21.651-2.188-15.224-23.549-17.64-34.353-9.853-3.384 2.435-5.978 5.695-7.478 10.074-1.522 4.377-2.269 10.363-2.269 17.967v25.317c0 42.113 51.14 36.162 45.041-.053l-13.37.068zm-16.947-34.244c0-4.361 3.586-7.922 7.964-7.922h1.063c4.394 0 7.981 3.56 7.981 7.922l-.192 9.81h-16.887l.072-9.81z" />
+                                            </svg></i></a></li>
+                                    <li><a class="googleplus-hover " target="_blank" href="#"><svg
+                                                class="mk-svg-icon" data-name="mk-jupiter-icon-googleplus"
+                                                data-cacheid="icon-63e30509080ff"
+                                                style=" height:16px; width: 16px; "
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path
+                                                    d="M205.849 140.778c-20.751-.603-34.656 19.464-31.078 45.686 3.59 26.207 23.305 47.942 44.048 48.537 20.738.613 34.656-20.168 31.079-46.377-3.579-26.223-23.302-47.25-44.049-47.846zm3.119 152.113c-21.312 1.313-37.396 7.996-48.006 19.904-1.109 2.083-1.983 4.24-2.573 6.456-.084.301-.151.608-.226.911-.377 1.637-.606 3.305-.672 4.997l-.001.029-.014.726c.122 21.019 22.403 38.491 53.223 38.491 43.178 0 58.395-16.281 58.586-37.197-.012-2.676-.349-5.297-.974-7.841l-.032-.115v-.001c-2.688-9.942-10.606-15.99-21.918-23.49-6.101-1.285-20.95-3.882-37.392-2.87zm47.032-299.291c-141.385 0-256 114.615-256 256s114.615 256 256 256 256-114.615 256-256-114.615-256-256-256zm21.05 190.059c0 16.639-9.306 28.938-22.469 39.106-12.835 9.926-15.275 14.081-15.275 22.522 0 7.188 13.749 19.446 20.953 24.469 19.996 14.015 27.119 27.058 27.759 47.94l.026.906c.01.376.012.762.014 1.144l.012.848v.329c0 28.428-27.813 56.688-78.189 56.688-44.185 0-81.469-17.785-81.469-46.215l.011-.56-.011-.471c0-4.868 1.117-9.707 3.2-14.367 4.175-10.01 12.255-19.246 23.095-26.442 13.313-10.993 31.09-17.341 52.644-18.62 3.237-.192 6.403-.254 9.468-.231-4.248-5.072-7.249-11.022-7.249-17.978 0-5.214 1.68-10.363 4.033-14.817-2.403.169-4.846 0-7.379 0-36.284 0-60.609-25.992-60.609-57.632 0-30.971 33.581-58.594 69.252-58.594h79.564l-17.8 18.511h-25.23c16.727 0 25.645 23.66 25.645 43.464zm107.046 19.951v67.49h-18.01v-67.49h-70.745v-18.01h70.745v-63.941h18.01v63.941h70.743v18.01h-70.743z" />
+                                            </svg></i></a></li>
+                                </ul>
+                                <div class="clearboth"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="mk-header-inner add-header-height">
+
+                    <div class="mk-header-bg "></div>
+
+                    <div class="mk-toolbar-resposnive-icon"><svg class="mk-svg-icon"
+                            data-name="mk-icon-chevron-down" data-cacheid="icon-63e3050908367"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792">
+                            <path
+                                d="M1683 808l-742 741q-19 19-45 19t-45-19l-742-741q-19-19-19-45.5t19-45.5l166-165q19-19 45-19t45 19l531 531 531-531q19-19 45-19t45 19l166 165q19 19 19 45.5t-19 45.5z" />
+                        </svg></div>
+
+                    <div class="mk-grid header-grid">
+
+                        <div class="mk-header-nav-container one-row-style menu-hover-style-5" role="navigation"
+                            itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+                            <nav class="mk-main-navigation js-main-nav">
+                                <ul id="menu-main-menu" class="main-navigation-ul">
+                                    <li id="menu-item-135"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home no-mega-menu">
+                                        <a class="menu-item-link js-smooth-scroll" href="index.html">Trang chủ</a></li>
+                                    <li id="menu-item-137"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page no-mega-menu">
+                                        <a class="menu-item-link js-smooth-scroll" href="gioi-thieu.html">Giới
+                                            Thiệu</a></li>
+                                    <li id="menu-item-136"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no-mega-menu">
+                                        <a class="menu-item-link js-smooth-scroll" href="#0">Chuyển Phát Nhanh</a>
+                                        <ul style="" class="sub-menu ">
+                                            <li id="menu-item-144"
+                                                class="menu-item menu-item-type-taxonomy menu-item-object-portfolio_category">
+                                                <a class="menu-item-link js-smooth-scroll"
+                                                    href="gui-hang-di-chau-a.html">Gửi Hàng Đi Châu Á</a></li>
+                                            <li id="menu-item-145"
+                                                class="menu-item menu-item-type-taxonomy menu-item-object-portfolio_category">
+                                                <a class="menu-item-link js-smooth-scroll"
+                                                    href="gui-hang-di-chau-uc.html">Gửi Hàng Đi Châu Úc</a></li>
+                                            <li id="menu-item-146"
+                                                class="menu-item menu-item-type-taxonomy menu-item-object-portfolio_category">
+                                                <a class="menu-item-link js-smooth-scroll"
+                                                    href="gui-hang-di-chau-au.html">Gửi Hàng Đi Châu Âu</a></li>
+                                            <li id="menu-item-147"
+                                                class="menu-item menu-item-type-taxonomy menu-item-object-portfolio_category">
+                                                <a class="menu-item-link js-smooth-scroll"
+                                                    href="gui-hang-di-chau-my.html">Gửi Hàng Đi Châu Mỹ</a>
+                                            </li>
+                                            <li id="menu-item-147"
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-portfolio_category">
+                                            <a class="menu-item-link js-smooth-scroll"
+                                                href="gui-hang-di-chau-phi.html">Gửi Hàng Đi Châu Phi</a>
+                                        </li>
+                                        </ul>
+                                    </li>
+                                    <li id="menu-item-136"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no-mega-menu">
+                                    <a class="menu-item-link js-smooth-scroll" href="#0">Air Cargo</a>
+                                    <ul style="" class="sub-menu ">
+                                        <li id="menu-item-144"
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-portfolio_category">
+                                            <a class="menu-item-link js-smooth-scroll"
+                                                href="air-cargo.html">Dịch Vụ Ari Cargo</a></li>
+                                    </ul>
+                                    </li>
+                                    <li id="menu-item-136"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no-mega-menu">
+                                    <a class="menu-item-link js-smooth-scroll" href="#0">Dịch Vụ Hàng Nhập</a>
+                                    <ul style="" class="sub-menu ">
+                                        <li id="menu-item-144"
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-portfolio_category">
+                                            <a class="menu-item-link js-smooth-scroll"
+                                                href="chuyen-hang-tu-my-ve-viet-nam.html">Dịch Vụ Chuyển Hàng Từ Mỹ Về Việt Nam</a></li>
+                                        <li id="menu-item-145"
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-portfolio_category">
+                                            <a class="menu-item-link js-smooth-scroll"
+                                                href="chuyen-hang-tu-canada-ve-viet-nam.html">Dịch Vụ Chuyển Hàng Từ Canada Về Việt Nam</a></li>
+                                        <li id="menu-item-146"
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-portfolio_category">
+                                            <a class="menu-item-link js-smooth-scroll"
+                                                href="chuyen-hang-tu-chinna-ve-viet-nam.html">Dịch Vụ Chuyển Hàng Từ China Về Việt Nam</a></li>
+                                        <li id="menu-item-147"
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-portfolio_category">
+                                            <a class="menu-item-link js-smooth-scroll"
+                                                href="chuyen-hang-tu-uc-ve-viet-nam.html">Dịch Vụ Chuyển Hàng Từ Úc Về Việt Nam</a>
+                                        </li>
+                                        <li id="menu-item-147"
+                                        class="menu-item menu-item-type-taxonomy menu-item-object-portfolio_category">
+                                        <a class="menu-item-link js-smooth-scroll"
+                                            href="chuyen-hang-tu-taiwan-ve-viet-nam.html">Dịch Vụ Chuyển Hàng Từ Taiwan Về Việt Nam</a>
+                                        </li>
+                                        <li id="menu-item-147"
+                                            class="menu-item menu-item-type-taxonomy menu-item-object-portfolio_category">
+                                            <a class="menu-item-link js-smooth-scroll"
+                                                href="chuyen-hang-tu-cambodia-ve-viet-nam.html">Dịch Vụ Chuyển Hàng Từ Combodia Về Việt Nam</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="menu-item-137"
+                                class="menu-item menu-item-type-post_type menu-item-object-page no-mega-menu">
+                                <a class="menu-item-link js-smooth-scroll" href="van-tai-duong-bien-sea.html">Vận Tải Đường Biển (Sea)</a></li>
+                                </ul>
+                            </nav>
+                         
+
+                        </div>
+
+                        <div class="mk-nav-responsive-link">
+                            <div class="mk-css-icon-menu">
+                                <div class="mk-css-icon-menu-line-1"></div>
+                                <div class="mk-css-icon-menu-line-2"></div>
+                                <div class="mk-css-icon-menu-line-3"></div>
+                            </div>
+                        </div>
+                        <div class=" header-logo fit-logo-img add-header-height logo-is-responsive logo-has-sticky">
+                            <a href="/" title="Vận Tải Key Express">
+
+                                <img class="mk-desktop-logo dark-logo " title="" alt=""
+                                    src="./images/logo.png" />
+
+                                <img class="mk-desktop-logo light-logo " title="" alt=""
+                                    src="./images/logo.png" />
+
+                                <img class="mk-resposnive-logo " title="" alt=""
+                                    src="./images/logo.png" />
+
+                                <img class="mk-sticky-logo " title="" alt=""
+                                    src="./images/logo.png" />
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="mk-header-right">
+                    </div>
+
+                </div>
+
+                <div class="mk-responsive-wrap">
+
+                    <nav class="menu-main-menu-container">
+                        <ul id="menu-main-menu-1" class="mk-responsive-nav">
+                            <li id="responsive-menu-item-135"
+                                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
+                                <a class="menu-item-link js-smooth-scroll" href="index.html">Trang chủ</a></li>
+                            <li id="responsive-menu-item-137"
+                                class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                    class="menu-item-link js-smooth-scroll" href="/gioi-thieu/">Giới Thiệu</a></li>
+                            <li id="responsive-menu-item-136"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                <a class="menu-item-link js-smooth-scroll" href="/dich-vu-van-chuyen/">Chuyển Phát Nhanh</a><span class="mk-nav-arrow mk-nav-sub-closed"><svg class="mk-svg-icon"
+                                        data-name="mk-moon-arrow-down" data-cacheid="icon-63e305090d8b4"
+                                        style=" height:16px; width: 16px; " xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 512 512">
+                                        <path d="M512 192l-96-96-160 160-160-160-96 96 256 255.999z" />
+                                    </svg></span>
+                                <ul class="sub-menu ">
+                                    <li id="responsive-menu-item-144"
+                                        class="menu-item menu-item-type-taxonomy menu-item-object-portfolio_category">
+                                        <a class="menu-item-link js-smooth-scroll"
+                                            href="gui-hang-di-chau-a.html">Gửi Hàng Đi Châu Á</a></li>
+                                    <li id="responsive-menu-item-145"
+                                        class="menu-item menu-item-type-taxonomy menu-item-object-portfolio_category">
+                                        <a class="menu-item-link js-smooth-scroll"
+                                            href="gui-hang-di-chau-uc.html">Gửi Hàng Đi Châu Úc</a></li>
+                                    <li id="responsive-menu-item-146"
+                                        class="menu-item menu-item-type-taxonomy menu-item-object-portfolio_category">
+                                        <a class="menu-item-link js-smooth-scroll"
+                                            href="gui-hang-di-chau-au.html">Gửi Hàng Đi Châu Âu</a></li>
+                                    <li id="responsive-menu-item-147"
+                                        class="menu-item menu-item-type-taxonomy menu-item-object-portfolio_category">
+                                        <a class="menu-item-link js-smooth-scroll"
+                                            href="gui-hang-di-chau-my.html">Gửi Hàng Đi Châu Mỹ</a></li>
+                                            <li id="responsive-menu-item-147"
+                                        class="menu-item menu-item-type-taxonomy menu-item-object-portfolio_category">
+                                        <a class="menu-item-link js-smooth-scroll"
+                                            href="gui-hang-di-chau-phi.html">Gửi Hàng Đi Châu Phi</a></li>
+                                </ul>
+                            </li>
+                               <li id="responsive-menu-item-136"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                <a class="menu-item-link js-smooth-scroll" href="#0">Air Cargo</a><span class="mk-nav-arrow mk-nav-sub-closed"><svg class="mk-svg-icon"
+                                        data-name="mk-moon-arrow-down" data-cacheid="icon-63e305090d8b4"
+                                        style=" height:16px; width: 16px; " xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 512 512">
+                                        <path d="M512 192l-96-96-160 160-160-160-96 96 256 255.999z" />
+                                    </svg></span>
+                                <ul class="sub-menu ">
+                                    <li id="responsive-menu-item-144"
+                                        class="menu-item menu-item-type-taxonomy menu-item-object-portfolio_category">
+                                        <a class="menu-item-link js-smooth-scroll"
+                                            href="air-cargo.html">Dịch Vụ Air Cargo</a></li>
+                                </ul>
+                            </li>
+                            <li id="responsive-menu-item-136"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                            <a class="menu-item-link js-smooth-scroll" href="#0">Dịch Vụ Hàng Nhập</a><span class="mk-nav-arrow mk-nav-sub-closed"><svg class="mk-svg-icon"
+                                    data-name="mk-moon-arrow-down" data-cacheid="icon-63e305090d8b4"
+                                    style=" height:16px; width: 16px; " xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512">
+                                    <path d="M512 192l-96-96-160 160-160-160-96 96 256 255.999z" />
+                                </svg></span>
+                            <ul class="sub-menu ">
+                                <li id="responsive-menu-item-144"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-portfolio_category">
+                                    <a class="menu-item-link js-smooth-scroll"
+                                        href="chuyen-hang-tu-my-ve-viet-nam.html">Dịch Vụ Gửi Hàng Từ Mỹ Về Việt Nam</a></li>
+                                <li id="responsive-menu-item-145"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-portfolio_category">
+                                    <a class="menu-item-link js-smooth-scroll"
+                                        href="chuyen-hang-tu-canada-ve-viet-nam.html">Dịch Vụ Gửi Hàng Từ Canada Về Việt Nam</a></li>
+                                <li id="responsive-menu-item-146"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-portfolio_category">
+                                    <a class="menu-item-link js-smooth-scroll"
+                                        href="chuyen-hang-tu-chinna-ve-viet-nam.html">Dịch Vụ Gửi Hàng Từ China Về Việt Nam</a></li>
+                                <li id="responsive-menu-item-147"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-portfolio_category">
+                                    <a class="menu-item-link js-smooth-scroll"
+                                        href="chuyen-hang-tu-uc-ve-viet-nam.html">Dịch Vụ Gửi Hàng Từ Úc Về Việt Nam</a></li>
+                                        <li id="responsive-menu-item-147"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-portfolio_category">
+                                    <a class="menu-item-link js-smooth-scroll"
+                                        href="chuyen-hang-tu-cambodia-ve-viet-nam.html">Dịch Vụ Gửi Hàng Từ Cambodia Về Việt Nam</a></li>
+                            </ul>
+                        </li>
+                         <li id="responsive-menu-item-135"
+                                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
+                                <a class="menu-item-link js-smooth-scroll" href="van-tai-duong-bien-sea.html">Vận Tải Đường Biển (Sea)</a></li>
+                        </ul>
+                    </nav>
+                   
+
+
+                </div>
+
+            </div>
+
+            <div class="mk-header-padding-wrapper"></div>
+
+
+        </header>
+
+            <div id="theme-page" class="master-holder  clearfix" role=&quot;main&quot;
+                itemprop=&quot;mainContentOfPage&quot;>
+                <div class="master-holder-bg-holder">
+                    <div id="theme-page-bg" class="master-holder-bg js-el"></div>
+                </div>
+                <div class="mk-main-wrapper-holder">
+                   
+                    <div class="container">
+                        <div class="row">
+                            <article id="190"
+                                class="mk-portfolio-item mk-portfolio-classic-item col-12 col-md-3 ">
+                                <div class="item-holder">
+                                    <div class="featured-image js-taphover">
+                                        <img class="portfolio-image" alt="Gửi hàng đi Đài Loan giá rẻ"
+                                            title="Gửi hàng đi Đài Loan giá rẻ"
+                                            src="./images/chaua1.jpg"
+                                            
+                                            width="369" height="250" />
+                                        <div class="image-hover-overlay"></div>
+    
+                                        <a class="hover-icon from-left project-load" target="_self"
+                                            href="gui-hang-di-dai-loan.html"
+                                            data-post-id="190"><svg class="mk-svg-icon"
+                                                data-name="mk-jupiter-icon-arrow-circle"
+                                                data-cacheid="icon-63e3564dcfc65"
+                                                style=" height:32px; width: 32px; "
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path
+                                                    d="M240 24c115.2 0 209.6 94.4 209.6 209.6s-94.4 209.6-209.6 209.6-209.6-94.4-209.6-209.6 94.4-209.6 209.6-209.6zm0-30.4c-132.8 0-240 107.2-240 240s107.2 240 240 240 240-107.2 240-240-107.2-240-240-240zm16 336c-4.8 0-8-1.6-11.2-4.8-6.4-6.4-6.4-16 0-22.4l68.8-68.8-68.8-68.8c-6.4-6.4-6.4-16 0-22.4s16-6.4 22.4 0l80 80c6.4 6.4 6.4 16 0 22.4l-80 80c-3.2 3.2-8 4.8-11.2 4.8zm80-80h-192c-9.6 0-16-6.4-16-16s6.4-16 16-16h192c9.6 0 16 6.4 16 16s-8 16-16 16z" />
+                                            </svg></a>
+                                        <a class="mk-lightbox hover-icon from-right "
+                                            href="./images/chaua1.jpg"
+                                            title="Gửi hàng đi Đài Loan giá rẻ"
+                                            data-fancybox-group="portfolio-loop-item"><svg class="mk-svg-icon"
+                                                data-name="mk-jupiter-icon-plus-circle"
+                                                data-cacheid="icon-63e3564dd01a2"
+                                                style=" height:32px; width: 32px; "
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path
+                                                    d="M240 24c115.2 0 209.6 94.4 209.6 209.6s-94.4 209.6-209.6 209.6-209.6-94.4-209.6-209.6 94.4-209.6 209.6-209.6zm0-30.4c-132.8 0-240 107.2-240 240s107.2 240 240 240 240-107.2 240-240-107.2-240-240-240zm80 256h-160c-9.6 0-16-6.4-16-16s6.4-16 16-16h160c9.6 0 16 6.4 16 16s-6.4 16-16 16zm-80 80c-9.6 0-16-6.4-16-16v-160c0-9.6 6.4-16 16-16s16 6.4 16 16v160c0 9.6-6.4 16-16 16z" />
+                                            </svg></a>
+                                    </div>
+                                    <div class="portfolio-meta-wrapper">
+                                        <h3 class="the-title"><a target="_self"
+                                                href="gui-hang-di-dai-loan.html">Gửi hàng đi Đài Loan giá rẻ</a></h3>
+                                        <div class="clearboth"></div>
+                                     
+                                        <p class="the-excerpt">Mục lục 1. Tại sao khách hàng lại chọn Key Express là nơi gửi hàng đi Taiwan 2. Những mặt hàng thường gửi từ Việt ...</p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article id="190"
+                            class="mk-portfolio-item mk-portfolio-classic-item col-12 col-md-3 ">
+                            <div class="item-holder">
+                                <div class="featured-image js-taphover">
+                                    <img class="portfolio-image" alt="Vận chuyển hàng đi Campuchia"
+                                        title="Vận chuyển hàng đi Campuchia"
+                                        src="./images/chaua2.png"
+                                        
+                                        width="369" height="250" />
+                                    <div class="image-hover-overlay"></div>
+
+                                    <a class="hover-icon from-left project-load" target="_self"
+                                        href="gui-hang-di-cambodia.html"
+                                        data-post-id="190"><svg class="mk-svg-icon"
+                                            data-name="mk-jupiter-icon-arrow-circle"
+                                            data-cacheid="icon-63e3564dcfc65"
+                                            style=" height:32px; width: 32px; "
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M240 24c115.2 0 209.6 94.4 209.6 209.6s-94.4 209.6-209.6 209.6-209.6-94.4-209.6-209.6 94.4-209.6 209.6-209.6zm0-30.4c-132.8 0-240 107.2-240 240s107.2 240 240 240 240-107.2 240-240-107.2-240-240-240zm16 336c-4.8 0-8-1.6-11.2-4.8-6.4-6.4-6.4-16 0-22.4l68.8-68.8-68.8-68.8c-6.4-6.4-6.4-16 0-22.4s16-6.4 22.4 0l80 80c6.4 6.4 6.4 16 0 22.4l-80 80c-3.2 3.2-8 4.8-11.2 4.8zm80-80h-192c-9.6 0-16-6.4-16-16s6.4-16 16-16h192c9.6 0 16 6.4 16 16s-8 16-16 16z" />
+                                        </svg></a>
+                                    <a class="mk-lightbox hover-icon from-right "
+                                        href="./images/chaua2.png"
+                                        title="Vận chuyển hàng đi Campuchia"
+                                        data-fancybox-group="portfolio-loop-item"><svg class="mk-svg-icon"
+                                            data-name="mk-jupiter-icon-plus-circle"
+                                            data-cacheid="icon-63e3564dd01a2"
+                                            style=" height:32px; width: 32px; "
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M240 24c115.2 0 209.6 94.4 209.6 209.6s-94.4 209.6-209.6 209.6-209.6-94.4-209.6-209.6 94.4-209.6 209.6-209.6zm0-30.4c-132.8 0-240 107.2-240 240s107.2 240 240 240 240-107.2 240-240-107.2-240-240-240zm80 256h-160c-9.6 0-16-6.4-16-16s6.4-16 16-16h160c9.6 0 16 6.4 16 16s-6.4 16-16 16zm-80 80c-9.6 0-16-6.4-16-16v-160c0-9.6 6.4-16 16-16s16 6.4 16 16v160c0 9.6-6.4 16-16 16z" />
+                                        </svg></a>
+                                </div>
+                                <div class="portfolio-meta-wrapper">
+                                    <h3 class="the-title"><a target="_self"
+                                            href="gui-hang-di-cambodia.html">Vận chuyển hàng đi Campuchia</a></h3>
+                                    <div class="clearboth"></div>
+                                 
+                                    <p class="the-excerpt">DỊCH VỤ VẬN CHUYỂN HÀNG ĐI CAMPUCHIA NHANH CHÓNG GIÁ RẺ Mục lục DỊCH VỤ VẬN CHUYỂN HÀNG ĐI CAMPUCHIA NHANH CHÓNG GIÁ RẺ Những ...</p>
+                                </div>
+                            </div>
+                            </article>
+                            <article id="190"
+                            class="mk-portfolio-item mk-portfolio-classic-item col-12 col-md-3 ">
+                            <div class="item-holder">
+                                <div class="featured-image js-taphover">
+                                    <img class="portfolio-image" alt="Gửi Hàng Đi Indonesia Giá Rẻ"
+                                        title="Gửi Hàng Đi Indonesia Giá Rẻ"
+                                        src="./images/chaua3.jpg"
+                                        
+                                        width="369" height="250" />
+                                    <div class="image-hover-overlay"></div>
+
+                                    <a class="hover-icon from-left project-load" target="_self"
+                                        href="gui-hang-di-indonesia.html"
+                                        data-post-id="190"><svg class="mk-svg-icon"
+                                            data-name="mk-jupiter-icon-arrow-circle"
+                                            data-cacheid="icon-63e3564dcfc65"
+                                            style=" height:32px; width: 32px; "
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M240 24c115.2 0 209.6 94.4 209.6 209.6s-94.4 209.6-209.6 209.6-209.6-94.4-209.6-209.6 94.4-209.6 209.6-209.6zm0-30.4c-132.8 0-240 107.2-240 240s107.2 240 240 240 240-107.2 240-240-107.2-240-240-240zm16 336c-4.8 0-8-1.6-11.2-4.8-6.4-6.4-6.4-16 0-22.4l68.8-68.8-68.8-68.8c-6.4-6.4-6.4-16 0-22.4s16-6.4 22.4 0l80 80c6.4 6.4 6.4 16 0 22.4l-80 80c-3.2 3.2-8 4.8-11.2 4.8zm80-80h-192c-9.6 0-16-6.4-16-16s6.4-16 16-16h192c9.6 0 16 6.4 16 16s-8 16-16 16z" />
+                                        </svg></a>
+                                    <a class="mk-lightbox hover-icon from-right "
+                                        href="./images/chaua3.jpg"
+                                        title="Gửi Hàng Đi Indonesia Giá Rẻ"
+                                        data-fancybox-group="portfolio-loop-item"><svg class="mk-svg-icon"
+                                            data-name="mk-jupiter-icon-plus-circle"
+                                            data-cacheid="icon-63e3564dd01a2"
+                                            style=" height:32px; width: 32px; "
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M240 24c115.2 0 209.6 94.4 209.6 209.6s-94.4 209.6-209.6 209.6-209.6-94.4-209.6-209.6 94.4-209.6 209.6-209.6zm0-30.4c-132.8 0-240 107.2-240 240s107.2 240 240 240 240-107.2 240-240-107.2-240-240-240zm80 256h-160c-9.6 0-16-6.4-16-16s6.4-16 16-16h160c9.6 0 16 6.4 16 16s-6.4 16-16 16zm-80 80c-9.6 0-16-6.4-16-16v-160c0-9.6 6.4-16 16-16s16 6.4 16 16v160c0 9.6-6.4 16-16 16z" />
+                                        </svg></a>
+                                </div>
+                                <div class="portfolio-meta-wrapper">
+                                    <h3 class="the-title"><a target="_self"
+                                            href="gui-hang-di-indonesia.html">Gửi Hàng Đi Indonesia Giá Rẻ</a></h3>
+                                    <div class="clearboth"></div>
+                                 
+                                    <p class="the-excerpt">Dịch vụ gửi hàng đi Indonesia giá rẻ? Bạn đang tìm kiếm đơn vị gửi hàng đi Indonesia giá rẻ, tiết kiệm? Bạn đang có nhu ...</p>
+                                </div>
+                            </div>
+                            </article>
+                            <article id="190"
+                            class="mk-portfolio-item mk-portfolio-classic-item col-12 col-md-3 ">
+                            <div class="item-holder">
+                                <div class="featured-image js-taphover">
+                                    <img class="portfolio-image" alt="GỬI HÀNG ĐI THÁI LAN"
+                                        title="GỬI HÀNG ĐI THÁI LAN"
+                                        src="./images/chaua4.jpg"
+                                        
+                                        width="369" height="250" />
+                                    <div class="image-hover-overlay"></div>
+
+                                    <a class="hover-icon from-left project-load" target="_self"
+                                        href="gui-hang-di-thailan.html"
+                                        data-post-id="190"><svg class="mk-svg-icon"
+                                            data-name="mk-jupiter-icon-arrow-circle"
+                                            data-cacheid="icon-63e3564dcfc65"
+                                            style=" height:32px; width: 32px; "
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M240 24c115.2 0 209.6 94.4 209.6 209.6s-94.4 209.6-209.6 209.6-209.6-94.4-209.6-209.6 94.4-209.6 209.6-209.6zm0-30.4c-132.8 0-240 107.2-240 240s107.2 240 240 240 240-107.2 240-240-107.2-240-240-240zm16 336c-4.8 0-8-1.6-11.2-4.8-6.4-6.4-6.4-16 0-22.4l68.8-68.8-68.8-68.8c-6.4-6.4-6.4-16 0-22.4s16-6.4 22.4 0l80 80c6.4 6.4 6.4 16 0 22.4l-80 80c-3.2 3.2-8 4.8-11.2 4.8zm80-80h-192c-9.6 0-16-6.4-16-16s6.4-16 16-16h192c9.6 0 16 6.4 16 16s-8 16-16 16z" />
+                                        </svg></a>
+                                    <a class="mk-lightbox hover-icon from-right "
+                                        href="./images/chaua4.jpg"
+                                        title="GỬI HÀNG ĐI THÁI LAN"
+                                        data-fancybox-group="portfolio-loop-item"><svg class="mk-svg-icon"
+                                            data-name="mk-jupiter-icon-plus-circle"
+                                            data-cacheid="icon-63e3564dd01a2"
+                                            style=" height:32px; width: 32px; "
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M240 24c115.2 0 209.6 94.4 209.6 209.6s-94.4 209.6-209.6 209.6-209.6-94.4-209.6-209.6 94.4-209.6 209.6-209.6zm0-30.4c-132.8 0-240 107.2-240 240s107.2 240 240 240 240-107.2 240-240-107.2-240-240-240zm80 256h-160c-9.6 0-16-6.4-16-16s6.4-16 16-16h160c9.6 0 16 6.4 16 16s-6.4 16-16 16zm-80 80c-9.6 0-16-6.4-16-16v-160c0-9.6 6.4-16 16-16s16 6.4 16 16v160c0 9.6-6.4 16-16 16z" />
+                                        </svg></a>
+                                </div>
+                                <div class="portfolio-meta-wrapper">
+                                    <h3 class="the-title"><a target="_self"
+                                            href="gui-hang-di-thailan.html">GỬI HÀNG ĐI THÁI LAN</a></h3>
+                                    <div class="clearboth"></div>
+                                 
+                                    <p class="the-excerpt">DỊCH VỤ GỬI HÀNG ĐI THÁI LAN HỎA TỐC Mục lục DỊCH VỤ GỬI HÀNG ĐI THÁI LAN HỎA TỐC 1. ƯU ĐIỂM KHI CHỌN ...
+                                        </p>
+                                </div>
+                            </div>
+                            </article>
+                            <article id="190"
+                            class="mk-portfolio-item mk-portfolio-classic-item col-12 col-md-3 ">
+                            <div class="item-holder">
+                                <div class="featured-image js-taphover">
+                                    <img class="portfolio-image" alt="GỬI HÀNG ĐI MALAYSIA"
+                                        title="GỬI HÀNG ĐI MALAYSIA"
+                                        src="./images/chaua5.jpg"
+                                        
+                                        width="369" height="250" />
+                                    <div class="image-hover-overlay"></div>
+
+                                    <a class="hover-icon from-left project-load" target="_self"
+                                        href="gui-hang-di-malaysia.html"
+                                        data-post-id="190"><svg class="mk-svg-icon"
+                                            data-name="mk-jupiter-icon-arrow-circle"
+                                            data-cacheid="icon-63e3564dcfc65"
+                                            style=" height:32px; width: 32px; "
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M240 24c115.2 0 209.6 94.4 209.6 209.6s-94.4 209.6-209.6 209.6-209.6-94.4-209.6-209.6 94.4-209.6 209.6-209.6zm0-30.4c-132.8 0-240 107.2-240 240s107.2 240 240 240 240-107.2 240-240-107.2-240-240-240zm16 336c-4.8 0-8-1.6-11.2-4.8-6.4-6.4-6.4-16 0-22.4l68.8-68.8-68.8-68.8c-6.4-6.4-6.4-16 0-22.4s16-6.4 22.4 0l80 80c6.4 6.4 6.4 16 0 22.4l-80 80c-3.2 3.2-8 4.8-11.2 4.8zm80-80h-192c-9.6 0-16-6.4-16-16s6.4-16 16-16h192c9.6 0 16 6.4 16 16s-8 16-16 16z" />
+                                        </svg></a>
+                                    <a class="mk-lightbox hover-icon from-right "
+                                        href="./images/chaua5.jpg"
+                                        title="GỬI HÀNG ĐI MALAYSIA"
+                                        data-fancybox-group="portfolio-loop-item"><svg class="mk-svg-icon"
+                                            data-name="mk-jupiter-icon-plus-circle"
+                                            data-cacheid="icon-63e3564dd01a2"
+                                            style=" height:32px; width: 32px; "
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M240 24c115.2 0 209.6 94.4 209.6 209.6s-94.4 209.6-209.6 209.6-209.6-94.4-209.6-209.6 94.4-209.6 209.6-209.6zm0-30.4c-132.8 0-240 107.2-240 240s107.2 240 240 240 240-107.2 240-240-107.2-240-240-240zm80 256h-160c-9.6 0-16-6.4-16-16s6.4-16 16-16h160c9.6 0 16 6.4 16 16s-6.4 16-16 16zm-80 80c-9.6 0-16-6.4-16-16v-160c0-9.6 6.4-16 16-16s16 6.4 16 16v160c0 9.6-6.4 16-16 16z" />
+                                        </svg></a>
+                                </div>
+                                <div class="portfolio-meta-wrapper">
+                                    <h3 class="the-title"><a target="_self"
+                                            href="gui-hang-di-malaysia.html">GỬI HÀNG ĐI MALAYSIA</a></h3>
+                                    <div class="clearboth"></div>
+                                 
+                                    <p class="the-excerpt">Key Express cung cấp thùng carton miễn phí cho khách hàng muốn gửi hàng đi Malaysia (thùng theo tiêu chuẩn vận chuyển đường
+                                        </p>
+                                </div>
+                            </div>
+                            </article>
+                            <article id="190"
+                            class="mk-portfolio-item mk-portfolio-classic-item col-12 col-md-3 ">
+                            <div class="item-holder">
+                                <div class="featured-image js-taphover">
+                                    <img class="portfolio-image" alt="GỬI HÀNG ĐI SINGAPORE"
+                                        title="GỬI HÀNG ĐI SINGAPORE"
+                                        src="./images/chaua6.jpg"
+                                        
+                                        width="369" height="250" />
+                                    <div class="image-hover-overlay"></div>
+
+                                    <a class="hover-icon from-left project-load" target="_self"
+                                        href="gui-hang-di-singapo.html"
+                                        data-post-id="190"><svg class="mk-svg-icon"
+                                            data-name="mk-jupiter-icon-arrow-circle"
+                                            data-cacheid="icon-63e3564dcfc65"
+                                            style=" height:32px; width: 32px; "
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M240 24c115.2 0 209.6 94.4 209.6 209.6s-94.4 209.6-209.6 209.6-209.6-94.4-209.6-209.6 94.4-209.6 209.6-209.6zm0-30.4c-132.8 0-240 107.2-240 240s107.2 240 240 240 240-107.2 240-240-107.2-240-240-240zm16 336c-4.8 0-8-1.6-11.2-4.8-6.4-6.4-6.4-16 0-22.4l68.8-68.8-68.8-68.8c-6.4-6.4-6.4-16 0-22.4s16-6.4 22.4 0l80 80c6.4 6.4 6.4 16 0 22.4l-80 80c-3.2 3.2-8 4.8-11.2 4.8zm80-80h-192c-9.6 0-16-6.4-16-16s6.4-16 16-16h192c9.6 0 16 6.4 16 16s-8 16-16 16z" />
+                                        </svg></a>
+                                    <a class="mk-lightbox hover-icon from-right "
+                                        href="./images/chaua6.jpg"
+                                        title="GỬI HÀNG ĐI SINGAPORE"
+                                        data-fancybox-group="portfolio-loop-item"><svg class="mk-svg-icon"
+                                            data-name="mk-jupiter-icon-plus-circle"
+                                            data-cacheid="icon-63e3564dd01a2"
+                                            style=" height:32px; width: 32px; "
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M240 24c115.2 0 209.6 94.4 209.6 209.6s-94.4 209.6-209.6 209.6-209.6-94.4-209.6-209.6 94.4-209.6 209.6-209.6zm0-30.4c-132.8 0-240 107.2-240 240s107.2 240 240 240 240-107.2 240-240-107.2-240-240-240zm80 256h-160c-9.6 0-16-6.4-16-16s6.4-16 16-16h160c9.6 0 16 6.4 16 16s-6.4 16-16 16zm-80 80c-9.6 0-16-6.4-16-16v-160c0-9.6 6.4-16 16-16s16 6.4 16 16v160c0 9.6-6.4 16-16 16z" />
+                                        </svg></a>
+                                </div>
+                                <div class="portfolio-meta-wrapper">
+                                    <h3 class="the-title"><a target="_self"
+                                            href="gui-hang-di-singapo.html">GỬI HÀNG ĐI SINGAPORE</a></h3>
+                                    <div class="clearboth"></div>
+                                 
+                                    <p class="the-excerpt">Dịch vụ gửi hàng đi singapore hỏa tốc. Bảo hiểm hàng hóa 100%. Bao gồm gói hỏa tốc và tiết kiệm cho khách hàng lựa chọn.
+                                        </p>
+                                </div>
+                            </div>
+                            </article>
+                           </div>
+                    </div>  
+
+                   
+            </div>
+
+
+            <section id="mk-footer-unfold-spacer"></section>
+
+            <section id="mk-footer" class="" role="contentinfo" itemscope="itemscope"
+                itemtype="https://schema.org/WPFooter">
+                <div class="footer-wrapper mk-grid">
+                    <div class="mk-padding-wrapper">
+                        <div class="mk-col-1-3">
+                            <section id="contact_info-3" class="widget widget_contact_info">
+                                <div class="widgettitle">CÔNG TY TNHH VẬN TẢI QUỐC TẾ KEY EXPRESS</div>
+                                <ul itemscope="itemscope" itemtype="https://schema.org/Person">
+
+                                    <li><svg class="mk-svg-icon" data-name="mk-icon-home"
+                                            data-cacheid="icon-63e30509323b1"
+                                            style=" height:16px; width: 14.857142857143px; "
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1664 1792">
+                                            <path
+                                                d="M1408 992v480q0 26-19 45t-45 19h-384v-384h-256v384h-384q-26 0-45-19t-19-45v-480q0-1 .5-3t.5-3l575-474 575 474q1 2 1 6zm223-69l-62 74q-8 9-21 11h-3q-13 0-21-7l-692-577-692 577q-12 8-24 7-13-2-21-11l-62-74q-8-10-7-23.5t11-21.5l719-599q32-26 76-26t76 26l244 204v-195q0-14 9-23t23-9h192q14 0 23 9t9 23v408l219 182q10 8 11 21.5t-7 23.5z" />
+                                        </svg>
+                                        <span itemprop="address" itemscope=""
+                                            itemtype="http://schema.org/PostalAddress">Địa chỉ: 1/DC63 Ô47 Đường NA5 ,Tổ
+                                            2,Kp Hoà Lân 2 , p.Thuận Giao ,Thuận An ,Bình Dương</span>
+                                    </li>
+                                    <li><svg class="mk-svg-icon" data-name="mk-icon-phone"
+                                            data-cacheid="icon-63e305093254b"
+                                            style=" height:16px; width: 12.571428571429px; "
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1408 1792">
+                                            <path
+                                                d="M1408 1240q0 27-10 70.5t-21 68.5q-21 50-122 106-94 51-186 51-27 0-52.5-3.5t-57.5-12.5-47.5-14.5-55.5-20.5-49-18q-98-35-175-83-128-79-264.5-215.5t-215.5-264.5q-48-77-83-175-3-9-18-49t-20.5-55.5-14.5-47.5-12.5-57.5-3.5-52.5q0-92 51-186 56-101 106-122 25-11 68.5-21t70.5-10q14 0 21 3 18 6 53 76 11 19 30 54t35 63.5 31 53.5q3 4 17.5 25t21.5 35.5 7 28.5q0 20-28.5 50t-62 55-62 53-28.5 46q0 9 5 22.5t8.5 20.5 14 24 11.5 19q76 137 174 235t235 174q2 1 19 11.5t24 14 20.5 8.5 22.5 5q18 0 46-28.5t53-62 55-62 50-28.5q14 0 28.5 7t35.5 21.5 25 17.5q25 15 53.5 31t63.5 35 54 30q70 35 76 53 3 7 3 21z" />
+                                        </svg><span>Hotline: 0979.633.975</span></li>
+
+                                    <li><svg class="mk-svg-icon" data-name="mk-icon-globe"
+                                            data-cacheid="icon-63e3050932752"
+                                            style=" height:16px; width: 13.714285714286px; "
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1792">
+                                            <path
+                                                d="M768 128q209 0 385.5 103t279.5 279.5 103 385.5-103 385.5-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103zm274 521q-2 1-9.5 9.5t-13.5 9.5q2 0 4.5-5t5-11 3.5-7q6-7 22-15 14-6 52-12 34-8 51 11-2-2 9.5-13t14.5-12q3-2 15-4.5t15-7.5l2-22q-12 1-17.5-7t-6.5-21q0 2-6 8 0-7-4.5-8t-11.5 1-9 1q-10-3-15-7.5t-8-16.5-4-15q-2-5-9.5-10.5t-9.5-10.5q-1-2-2.5-5.5t-3-6.5-4-5.5-5.5-2.5-7 5-7.5 10-4.5 5q-3-2-6-1.5t-4.5 1-4.5 3-5 3.5q-3 2-8.5 3t-8.5 2q15-5-1-11-10-4-16-3 9-4 7.5-12t-8.5-14h5q-1-4-8.5-8.5t-17.5-8.5-13-6q-8-5-34-9.5t-33-.5q-5 6-4.5 10.5t4 14 3.5 12.5q1 6-5.5 13t-6.5 12q0 7 14 15.5t10 21.5q-3 8-16 16t-16 12q-5 8-1.5 18.5t10.5 16.5q2 2 1.5 4t-3.5 4.5-5.5 4-6.5 3.5l-3 2q-11 5-20.5-6t-13.5-26q-7-25-16-30-23-8-29 1-5-13-41-26-25-9-58-4 6-1 0-15-7-15-19-12 3-6 4-17.5t1-13.5q3-13 12-23 1-1 7-8.5t9.5-13.5.5-6q35 4 50-11 5-5 11.5-17t10.5-17q9-6 14-5.5t14.5 5.5 14.5 5q14 1 15.5-11t-7.5-20q12 1 3-17-5-7-8-9-12-4-27 5-8 4 2 8-1-1-9.5 10.5t-16.5 17.5-16-5q-1-1-5.5-13.5t-9.5-13.5q-8 0-16 15 3-8-11-15t-24-8q19-12-8-27-7-4-20.5-5t-19.5 4q-5 7-5.5 11.5t5 8 10.5 5.5 11.5 4 8.5 3q14 10 8 14-2 1-8.5 3.5t-11.5 4.5-6 4q-3 4 0 14t-2 14q-5-5-9-17.5t-7-16.5q7 9-25 6l-10-1q-4 0-16 2t-20.5 1-13.5-8q-4-8 0-20 1-4 4-2-4-3-11-9.5t-10-8.5q-46 15-94 41 6 1 12-1 5-2 13-6.5t10-5.5q34-14 42-7l5-5q14 16 20 25-7-4-30-1-20 6-22 12 7 12 5 18-4-3-11.5-10t-14.5-11-15-5q-16 0-22 1-146 80-235 222 7 7 12 8 4 1 5 9t2.5 11 11.5-3q9 8 3 19 1-1 44 27 19 17 21 21 3 11-10 18-1-2-9-9t-9-4q-3 5 .5 18.5t10.5 12.5q-7 0-9.5 16t-2.5 35.5-1 23.5l2 1q-3 12 5.5 34.5t21.5 19.5q-13 3 20 43 6 8 8 9 3 2 12 7.5t15 10 10 10.5q4 5 10 22.5t14 23.5q-2 6 9.5 20t10.5 23q-1 0-2.5 1t-2.5 1q3 7 15.5 14t15.5 13q1 3 2 10t3 11 8 2q2-20-24-62-15-25-17-29-3-5-5.5-15.5t-4.5-14.5q2 0 6 1.5t8.5 3.5 7.5 4 2 3q-3 7 2 17.5t12 18.5 17 19 12 13q6 6 14 19.5t0 13.5q9 0 20 10t17 20q5 8 8 26t5 24q2 7 8.5 13.5t12.5 9.5l16 8 13 7q5 2 18.5 10.5t21.5 11.5q10 4 16 4t14.5-2.5 13.5-3.5q15-2 29 15t21 21q36 19 55 11-2 1 .5 7.5t8 15.5 9 14.5 5.5 8.5q5 6 18 15t18 15q6-4 7-9-3 8 7 20t18 10q14-3 14-32-31 15-49-18 0-1-2.5-5.5t-4-8.5-2.5-8.5 0-7.5 5-3q9 0 10-3.5t-2-12.5-4-13q-1-8-11-20t-12-15q-5 9-16 8t-16-9q0 1-1.5 5.5t-1.5 6.5q-13 0-15-1 1-3 2.5-17.5t3.5-22.5q1-4 5.5-12t7.5-14.5 4-12.5-4.5-9.5-17.5-2.5q-19 1-26 20-1 3-3 10.5t-5 11.5-9 7q-7 3-24 2t-24-5q-13-8-22.5-29t-9.5-37q0-10 2.5-26.5t3-25-5.5-24.5q3-2 9-9.5t10-10.5q2-1 4.5-1.5t4.5 0 4-1.5 3-6q-1-1-4-3-3-3-4-3 7 3 28.5-1.5t27.5 1.5q15 11 22-2 0-1-2.5-9.5t-.5-13.5q5 27 29 9 3 3 15.5 5t17.5 5q3 2 7 5.5t5.5 4.5 5-.5 8.5-6.5q10 14 12 24 11 40 19 44 7 3 11 2t4.5-9.5 0-14-1.5-12.5l-1-8v-18l-1-8q-15-3-18.5-12t1.5-18.5 15-18.5q1-1 8-3.5t15.5-6.5 12.5-8q21-19 15-35 7 0 11-9-1 0-5-3t-7.5-5-4.5-2q9-5 2-16 5-3 7.5-11t7.5-10q9 12 21 2 7-8 1-16 5-7 20.5-10.5t18.5-9.5q7 2 8-2t1-12 3-12q4-5 15-9t13-5l17-11q3-4 0-4 18 2 31-11 10-11-6-20 3-6-3-9.5t-15-5.5q3-1 11.5-.5t10.5-1.5q15-10-7-16-17-5-43 12zm-163 877q206-36 351-189-3-3-12.5-4.5t-12.5-3.5q-18-7-24-8 1-7-2.5-13t-8-9-12.5-8-11-7q-2-2-7-6t-7-5.5-7.5-4.5-8.5-2-10 1l-3 1q-3 1-5.5 2.5t-5.5 3-4 3 0 2.5q-21-17-36-22-5-1-11-5.5t-10.5-7-10-1.5-11.5 7q-5 5-6 15t-2 13q-7-5 0-17.5t2-18.5q-3-6-10.5-4.5t-12 4.5-11.5 8.5-9 6.5-8.5 5.5-8.5 7.5q-3 4-6 12t-5 11q-2-4-11.5-6.5t-9.5-5.5q2 10 4 35t5 38q7 31-12 48-27 25-29 40-4 22 12 26 0 7-8 20.5t-7 21.5q0 6 2 16z" />
+                                        </svg><span><a href="index.html" itemprop="url">keyexpress.vn</a></span></li>
+                                </ul>
+                            </section>
+                            <section id="social-3" class="widget widget_social_networks">
+                                <div id="social-63e30509327f5" class="align-left"><a href="" rel="nofollow"
+                                        class="builtin-icons dark medium facebook-hover" target="_blank"
+                                        alt="Follow Us on facebook" title="Follow Us on facebook"><svg
+                                            class="mk-svg-icon" data-name="mk-jupiter-icon-facebook"
+                                            data-cacheid="icon-63e3050932926" style=" height:24px; width: 24px; "
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M256-6.4c-141.385 0-256 114.615-256 256s114.615 256 256 256 256-114.615 256-256-114.615-256-256-256zm64.057 159.299h-49.041c-7.42 0-14.918 7.452-14.918 12.99v19.487h63.723c-2.081 28.41-6.407 64.679-6.407 64.679h-57.566v159.545h-63.929v-159.545h-32.756v-64.474h32.756v-33.53c0-8.098-1.706-62.336 70.46-62.336h57.678v63.183z" />
+                                        </svg></a>
+                                    <a href="" rel="nofollow" class="builtin-icons dark medium google-hover"
+                                        target="_blank" alt="Follow Us on google" title="Follow Us on google"><svg
+                                            class="mk-svg-icon" data-name="mk-jupiter-icon-google"
+                                            data-cacheid="icon-63e3050932a94" style=" height:24px; width: 24px; "
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M257.197 103.407c-10.982 0-22.797 5.462-29.553 13.868-7.165 8.831-9.277 20.157-9.277 31.086 0 28.134 16.46 74.767 52.752 74.767 10.551 0 21.963-5.038 28.724-11.751 9.699-9.678 10.56-23.104 10.56-30.679 0-30.237-18.166-77.29-53.207-77.29zm20.684 187.364c-3.797 0-26.589.831-44.332 6.736-9.278 3.358-36.298 13.416-36.298 43.256 0 29.822 29.137 51.238 74.296 51.238 40.533 0 62.09-19.322 62.09-45.351 0-21.416-13.933-32.784-46.037-55.473-3.39-.406-5.494-.406-9.719-.406zm-21.881-297.171c-141.385 0-256 114.615-256 256s114.615 256 256 256 256-114.615 256-256-114.615-256-256-256zm91.541 167.789c0 31.086-17.731 45.789-35.461 59.644-5.474 5.457-11.801 11.353-11.801 20.594 0 9.246 6.326 14.264 10.949 18.068l15.209 11.746c18.565 15.547 35.449 29.849 35.449 58.803 0 39.517-38.412 79.426-111.03 79.426-61.21 0-90.778-29.001-90.778-60.094 0-15.124 7.619-36.531 32.523-51.267 26.186-15.943 61.655-18.039 80.631-19.294-5.91-7.574-12.662-15.539-12.662-28.566 0-7.152 2.135-11.355 4.244-16.375-4.685.402-9.303.831-13.523.831-44.74 0-70.075-33.207-70.075-65.964 0-19.335 8.846-40.742 27.02-56.294 24.052-19.727 52.752-23.086 75.553-23.086h86.953l-26.985 15.109h-26.205c9.709 7.977 29.986 24.779 29.986 56.719z" />
+                                        </svg></a>
+                                    <a href="" rel="nofollow" class="builtin-icons dark medium instagram-hover"
+                                        target="_blank" alt="Follow Us on instagram" title="Follow Us on instagram"><svg
+                                            class="mk-svg-icon" data-name="mk-jupiter-icon-instagram"
+                                            data-cacheid="icon-63e3050932bcc" style=" height:24px; width: 24px; "
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M375.3,197.7L375.3,197.7c-0.6-11.5-2.2-20.4-5-27.1c-2.5-6.7-5.7-11.8-10.9-17c-5.9-5.5-10.5-8.4-16.9-10.9 c-4.1-1.8-11.3-4.3-27.1-5c-15.4-0.7-20.4-0.7-58.8-0.7s-43.4,0-58.8,0.7c-11.5,0.6-20.4,2.2-27,5c-6.7,2.5-11.8,5.7-17,10.9 c-5.5,5.9-8.4,10.5-10.9,16.9c-1.8,4.1-4.3,11.3-5,27.1c-0.7,15.4-0.7,20.4-0.7,58.8s0,43.4,0.7,58.8c0.4,14.3,2.9,22,5,27.1 c2.5,6.7,5.7,11.8,10.9,17c5.9,5.5,10.5,8.4,16.9,10.9c4.1,1.8,11.3,4.3,27.1,5c15.4,0.7,20.4,0.7,58.8,0.7s43.4,0,58.8-0.7 c11.5-0.6,20.4-2.2,27-5c6.7-2.5,11.8-5.7,17-10.9c5.5-5.9,8.4-10.5,10.9-16.9c1.8-4.1,4.3-11.3,5-27.1l0.2-3.4 c0.6-13.1,0.9-19.7,0.5-55.5C376,218,376,213.1,375.3,197.7z M351.4,178.7c0,9.4-7.7,17.1-17.1,17.1c-9.4,0-17.1-7.7-17.1-17.1 c0-9.4,7.7-17.1,17.1-17.1C343.7,161.6,351.4,169.3,351.4,178.7z M256.5,330.6c-40.9,0-74.1-33.2-74.1-74.1 c0-40.9,33.2-74.1,74.1-74.1c40.9,0,74.1,33.2,74.1,74.1C330.6,297.4,297.4,330.6,256.5,330.6z" />
+                                            <ellipse transform="matrix(0.9732 -0.2298 0.2298 0.9732 -52.0702 65.7936)"
+                                                cx="256.5" cy="256.5" rx="48.9" ry="48.9" />
+                                            <path
+                                                d="M437.9,75.1C389.4,26.7,325,0,256.5,0C188,0,123.6,26.7,75.1,75.1S0,188,0,256.5C0,325,26.7,389.4,75.1,437.9 C123.6,486.3,188,513,256.5,513c68.5,0,132.9-26.7,181.4-75.1C486.3,389.4,513,325,513,256.5C513,188,486.3,123.6,437.9,75.1z  M400.8,316.4L400.8,316.4c-0.6,14.1-2.7,24.7-6.8,35.3c-4.2,10.5-9.2,18.2-16.7,25.6c-8,8-16,13.2-25.6,16.7 c-10.4,4-21.3,6.1-35.3,6.8c-15.4,0.7-20.5,0.7-59.9,0.7c-39.3,0-44.4,0-59.9-0.7c-14.1-0.6-24.7-2.6-35.3-6.8 c-10.5-4.2-18.2-9.2-25.6-16.7c-8.1-8.1-13.2-16-16.7-25.6c-4-10.4-6.1-21.3-6.8-35.3c-0.7-15.4-0.7-20.5-0.7-59.9 c0-39.3,0-44.4,0.7-59.9c0.6-14.1,2.6-24.7,6.8-35.3c3.9-9.7,9-17.6,16.7-25.6c8.1-8.1,16-13.2,25.6-16.7c10.4-4,21.3-6.1,35.3-6.8 c15.4-0.7,20.5-0.7,59.9-0.7c39.3,0,44.4,0,59.9,0.7c14.1,0.6,24.7,2.6,35.3,6.8c10.5,4.2,18.1,9.2,25.6,16.7 c8,8.1,13.2,16,16.7,25.6c4,10.4,6.1,21.3,6.8,35.3c0.7,15.4,0.7,20.5,0.7,59.9C401.5,295.8,401.5,300.9,400.8,316.4z" />
+                                        </svg></a>
+                                    <a href="" rel="nofollow" class="builtin-icons dark medium youtube-hover"
+                                        target="_blank" alt="Follow Us on youtube" title="Follow Us on youtube"><svg
+                                            class="mk-svg-icon" data-name="mk-jupiter-icon-youtube"
+                                            data-cacheid="icon-63e3050932cf9" style=" height:24px; width: 24px; "
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M202.48 284.307v-14.152l-56.999-.098v13.924l17.791.053v95.84h17.835l-.013-95.567h21.386zm24.889 65.266c0 7.385.448 11.076-.017 12.377-1.446 3.965-7.964 8.156-10.513.43-.427-1.353-.049-5.44-.049-12.447l-.07-51.394h-17.734l.053 50.578c.022 7.752-.172 13.537.061 16.164.44 4.644.286 10.049 4.584 13.133 8.026 5.793 23.391-.861 27.24-9.123l-.04 10.547 14.319.019v-81.318h-17.835v51.035zm46.259-47.854l.062-31.592-17.809.035-.089 109.006 14.645-.219 1.335-6.785c18.715 17.166 30.485 5.404 30.458-15.174l-.035-42.49c-.017-16.183-12.129-25.887-28.567-12.781zm15.364 58.35c0 3.524-3.515 6.39-7.805 6.39s-7.797-2.867-7.797-6.39v-47.695c0-3.526 3.507-6.408 7.797-6.408 4.289 0 7.805 2.883 7.805 6.408v47.695zm-36.294-164.046c4.343 0 7.876-3.912 7.876-8.698v-44.983c0-4.778-3.532-8.684-7.876-8.684-4.338 0-7.903 3.906-7.903 8.684v44.984c0 4.786 3.565 8.698 7.903 8.698zm3.302-202.423c-141.385 0-256 114.615-256 256s114.615 256 256 256 256-114.615 256-256-114.615-256-256-256zm31.394 129.297h16.34v65.764c0 3.564 2.935 6.473 6.505 6.473 3.586 0 6.512-2.909 6.512-6.473v-65.764h15.649v84.5h-19.866l.334-6.996c-1.354 2.844-3.024 4.971-5.001 6.399-1.988 1.433-4.255 2.127-6.83 2.127-2.928 0-5.381-.681-7.297-2.026-1.933-1.366-3.366-3.178-4.29-5.418-.915-2.26-1.476-4.602-1.705-7.037-.219-2.457-.351-7.295-.351-14.556v-56.991zm-48.83.883c3.511-2.769 8.003-4.158 13.471-4.158 4.592 0 8.539.901 11.826 2.673 3.305 1.771 5.854 4.083 7.631 6.931 1.801 2.856 3.022 5.793 3.673 8.799.66 3.046.994 7.643.994 13.836v21.369c0 7.84-.317 13.606-.923 17.267-.599 3.67-1.908 7.072-3.912 10.272-1.988 3.156-4.544 5.52-7.647 7.028-3.137 1.516-6.733 2.259-10.786 2.259-4.531 0-8.341-.619-11.488-1.933-3.156-1.292-5.59-3.261-7.331-5.858-1.754-2.594-2.985-5.772-3.727-9.468-.756-3.7-1.113-9.26-1.113-16.666v-22.371c0-8.113.685-14.446 2.026-19.012 1.345-4.549 3.78-8.211 7.305-10.966zm-52.06-34.18l11.946 41.353 11.77-41.239h20.512l-22.16 55.523-.023 64.81h-18.736l-.031-64.788-23.566-55.659h20.287zm197.528 280.428c0 21.764-18.882 39.572-41.947 39.572h-172.476c-23.078 0-41.951-17.808-41.951-39.572v-90.733c0-21.755 18.873-39.573 41.951-39.573h172.476c23.065 0 41.947 17.819 41.947 39.573v90.733zm-39.38-18.602l-.034 1.803v7.453c0 4-3.297 7.244-7.298 7.244h-2.619c-4.015 0-7.313-3.244-7.313-7.244v-19.61h30.617v-11.515c0-8.42-.229-16.832-.924-21.651-2.188-15.224-23.549-17.64-34.353-9.853-3.384 2.435-5.978 5.695-7.478 10.074-1.522 4.377-2.269 10.363-2.269 17.967v25.317c0 42.113 51.14 36.162 45.041-.053l-13.37.068zm-16.947-34.244c0-4.361 3.586-7.922 7.964-7.922h1.063c4.394 0 7.981 3.56 7.981 7.922l-.192 9.81h-16.887l.072-9.81z" />
+                                        </svg></a>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="mk-col-1-3">
+                            <section id="recent-posts-3" class="widget widget_recent_entries">
+                                <div class="widgettitle">TIN TỨC SỰ KIỆN</div>
+                                <ul>
+                                    <li>
+                                        <a href="#">Phương Tiện Đường Bộ Gồm
+                                            Những Loại Xe Nào?</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Dịch Vụ Vận Chuyển
+                                            Thuê Xe Nguyên Chuyến Là Gì?</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Vận chuyển hàng lẻ, hàng ghép là
+                                            gì?</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Vận Tải Đường Bộ Là Gì?</a>
+                                    </li>
+                                </ul>
+
+                            </section>
+                        </div>
+                        <div class="mk-col-1-3">
+                            <section id="ninja_forms_widget-3" class="widget widget_ninja_forms_widget"><noscript
+                                    class="ninja-forms-noscript-message">
+                                    Lưu ý: Cần phải có JavaScript với nội dung này.</noscript>
+                                <div id="nf-form-2-cont" class="nf-form-cont" aria-live="polite"
+                                    aria-labelledby="nf-form-title-2" aria-describedby="nf-form-errors-2" role="form">
+
+                                    <div class="nf-loading-spinner"></div>
+
+                                </div>
+                                <!-- TODO: Move to Template File. -->
+                                <script>
+                                    var formDisplay = 1;
+                                    var nfForms = nfForms || [];
+                                    var form = [];
+                                    form.id = '2';
+                                    form.settings = {
+                                        "objectType": "Form Setting",
+                                        "editActive": true,
+                                        "title": "B\u00e1o Gi\u00e1 C\u01b0\u1edbc V\u1eadn Chuy\u1ec3n",
+                                        "created_at": "2016-08-24 16:39:20",
+                                        "form_title": "Contact Me",
+                                        "default_label_pos": "above",
+                                        "show_title": "1",
+                                        "clear_complete": "1",
+                                        "hide_complete": "1",
+                                        "logged_in": "0",
+                                        "key": "",
+                                        "conditions": [],
+                                        "wrapper_class": "",
+                                        "element_class": "",
+                                        "add_submit": "1",
+                                        "not_logged_in_msg": "",
+                                        "sub_limit_number": "",
+                                        "sub_limit_msg": "",
+                                        "calculations": [],
+                                        "formContentData": ["name", "phone_1668223705098", "textbox_1668223701752", "g_i_thong_tin_1668223698238"],
+                                        "container_styles_background-color": "",
+                                        "container_styles_border": "",
+                                        "container_styles_border-style": "",
+                                        "container_styles_border-color": "",
+                                        "container_styles_color": "",
+                                        "container_styles_height": "",
+                                        "container_styles_width": "",
+                                        "container_styles_font-size": "",
+                                        "container_styles_margin": "",
+                                        "container_styles_padding": "",
+                                        "container_styles_display": "",
+                                        "container_styles_float": "",
+                                        "container_styles_show_advanced_css": "0",
+                                        "container_styles_advanced": "",
+                                        "title_styles_background-color": "",
+                                        "title_styles_border": "",
+                                        "title_styles_border-style": "",
+                                        "title_styles_border-color": "",
+                                        "title_styles_color": "",
+                                        "title_styles_height": "",
+                                        "title_styles_width": "",
+                                        "title_styles_font-size": "",
+                                        "title_styles_margin": "",
+                                        "title_styles_padding": "",
+                                        "title_styles_display": "",
+                                        "title_styles_float": "",
+                                        "title_styles_show_advanced_css": "0",
+                                        "title_styles_advanced": "",
+                                        "row_styles_background-color": "",
+                                        "row_styles_border": "",
+                                        "row_styles_border-style": "",
+                                        "row_styles_border-color": "",
+                                        "row_styles_color": "",
+                                        "row_styles_height": "",
+                                        "row_styles_width": "",
+                                        "row_styles_font-size": "",
+                                        "row_styles_margin": "",
+                                        "row_styles_padding": "",
+                                        "row_styles_display": "",
+                                        "row_styles_show_advanced_css": "0",
+                                        "row_styles_advanced": "",
+                                        "row-odd_styles_background-color": "",
+                                        "row-odd_styles_border": "",
+                                        "row-odd_styles_border-style": "",
+                                        "row-odd_styles_border-color": "",
+                                        "row-odd_styles_color": "",
+                                        "row-odd_styles_height": "",
+                                        "row-odd_styles_width": "",
+                                        "row-odd_styles_font-size": "",
+                                        "row-odd_styles_margin": "",
+                                        "row-odd_styles_padding": "",
+                                        "row-odd_styles_display": "",
+                                        "row-odd_styles_show_advanced_css": "0",
+                                        "row-odd_styles_advanced": "",
+                                        "success-msg_styles_background-color": "",
+                                        "success-msg_styles_border": "",
+                                        "success-msg_styles_border-style": "",
+                                        "success-msg_styles_border-color": "",
+                                        "success-msg_styles_color": "",
+                                        "success-msg_styles_height": "",
+                                        "success-msg_styles_width": "",
+                                        "success-msg_styles_font-size": "",
+                                        "success-msg_styles_margin": "",
+                                        "success-msg_styles_padding": "",
+                                        "success-msg_styles_display": "",
+                                        "success-msg_styles_show_advanced_css": "0",
+                                        "success-msg_styles_advanced": "",
+                                        "error_msg_styles_background-color": "",
+                                        "error_msg_styles_border": "",
+                                        "error_msg_styles_border-style": "",
+                                        "error_msg_styles_border-color": "",
+                                        "error_msg_styles_color": "",
+                                        "error_msg_styles_height": "",
+                                        "error_msg_styles_width": "",
+                                        "error_msg_styles_font-size": "",
+                                        "error_msg_styles_margin": "",
+                                        "error_msg_styles_padding": "",
+                                        "error_msg_styles_display": "",
+                                        "error_msg_styles_show_advanced_css": "0",
+                                        "error_msg_styles_advanced": "",
+                                        "allow_public_link": 0,
+                                        "embed_form": "",
+                                        "changeEmailErrorMsg": "H\u00e3y nh\u1eadp m\u1ed9t \u0111\u1ecba ch\u1ec9 email h\u1ee3p l\u1ec7!",
+                                        "changeDateErrorMsg": "Please enter a valid date!",
+                                        "confirmFieldErrorMsg": "Nh\u1eefng tr\u01b0\u1eddng n\u00e0y ph\u1ea3i kh\u1edbp!",
+                                        "fieldNumberNumMinError": "L\u1ed7i s\u1ed1 t\u1ed1i thi\u1ec3u",
+                                        "fieldNumberNumMaxError": "L\u1ed7i s\u1ed1 t\u1ed1i \u0111a",
+                                        "fieldNumberIncrementBy": "H\u00e3y t\u0103ng theo ",
+                                        "formErrorsCorrectErrors": "H\u00e3y s\u1eeda l\u1ed7i tr\u01b0\u1edbc khi g\u1eedi m\u1eabu n\u00e0y.",
+                                        "validateRequiredField": "\u0110\u00e2y l\u00e0 m\u1ed9t tr\u01b0\u1eddng b\u1eaft bu\u1ed9c.",
+                                        "honeypotHoneypotError": "L\u1ed7i Honeypot",
+                                        "fieldsMarkedRequired": "C\u00e1c tr\u01b0\u1eddng \u0111\u01b0\u1ee3c \u0111\u00e1nh d\u1ea5u <span class=\"ninja-forms-req-symbol\">*<\/span> l\u00e0 b\u1eaft bu\u1ed9c",
+                                        "currency": "",
+                                        "unique_field_error": "A form with this value has already been submitted.",
+                                        "drawerDisabled": false,
+                                        "ninjaForms": "Ninja Forms",
+                                        "fieldTextareaRTEInsertLink": "Ch\u00e8n li\u00ean k\u1ebft",
+                                        "fieldTextareaRTEInsertMedia": "Ch\u00e8n ph\u01b0\u01a1ng ti\u1ec7n",
+                                        "fieldTextareaRTESelectAFile": "Ch\u1ecdn t\u1eadp tin",
+                                        "formHoneypot": "N\u1ebfu b\u1ea1n l\u00e0 ng\u01b0\u1eddi \u0111ang xem tr\u01b0\u1eddng n\u00e0y, h\u00e3y \u0111\u1ec3 tr\u1ed1ng n\u00f3.",
+                                        "fileUploadOldCodeFileUploadInProgress": "\u0110ang t\u1ea3i t\u1eadp tin l\u00ean.",
+                                        "fileUploadOldCodeFileUpload": "T\u1ea2I T\u1eacP TIN L\u00caN",
+                                        "currencySymbol": false,
+                                        "thousands_sep": ".",
+                                        "decimal_point": ",",
+                                        "siteLocale": "vi",
+                                        "dateFormat": "m\/d\/Y",
+                                        "startOfWeek": "1",
+                                        "of": "c\u1ee7a",
+                                        "previousMonth": "Previous Month",
+                                        "nextMonth": "Next Month",
+                                        "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                                        "monthsShort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                                        "weekdays": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                                        "weekdaysShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+                                        "weekdaysMin": ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+                                        "recaptchaConsentMissing": "reCapctha validation couldn&#039;t load.",
+                                        "recaptchaMissingCookie": "reCaptcha v3 validation couldn&#039;t load the cookie needed to submit the form.",
+                                        "recaptchaConsentEvent": "Accept reCaptcha cookies before sending the form.",
+                                        "currency_symbol": "",
+                                        "beforeForm": "",
+                                        "beforeFields": "",
+                                        "afterFields": "",
+                                        "afterForm": ""
+                                    };
+                                    form.fields = [{
+                                        "objectType": "Field",
+                                        "objectDomain": "fields",
+                                        "editActive": false,
+                                        "order": 1,
+                                        "idAttribute": "id",
+                                        "label": "",
+                                        "key": "name",
+                                        "type": "textbox",
+                                        "created_at": "2016-08-24 16:39:20",
+                                        "label_pos": "above",
+                                        "required": 0,
+                                        "placeholder": "H\u1ecd V\u00e0 T\u00ean",
+                                        "default": "",
+                                        "wrapper_class": "",
+                                        "element_class": "",
+                                        "container_class": "",
+                                        "input_limit": "",
+                                        "input_limit_type": "characters",
+                                        "input_limit_msg": "Character(s) left",
+                                        "manual_key": "",
+                                        "disable_input": "",
+                                        "admin_label": "",
+                                        "help_text": "",
+                                        "desc_text": "",
+                                        "disable_browser_autocomplete": "",
+                                        "mask": "",
+                                        "custom_mask": "",
+                                        "wrap_styles_background-color": "",
+                                        "wrap_styles_border": "",
+                                        "wrap_styles_border-style": "",
+                                        "wrap_styles_border-color": "",
+                                        "wrap_styles_color": "",
+                                        "wrap_styles_height": "",
+                                        "wrap_styles_width": "",
+                                        "wrap_styles_font-size": "",
+                                        "wrap_styles_margin": "",
+                                        "wrap_styles_padding": "",
+                                        "wrap_styles_display": "",
+                                        "wrap_styles_float": "",
+                                        "wrap_styles_show_advanced_css": 0,
+                                        "wrap_styles_advanced": "",
+                                        "label_styles_background-color": "",
+                                        "label_styles_border": "",
+                                        "label_styles_border-style": "",
+                                        "label_styles_border-color": "",
+                                        "label_styles_color": "",
+                                        "label_styles_height": "",
+                                        "label_styles_width": "",
+                                        "label_styles_font-size": "",
+                                        "label_styles_margin": "",
+                                        "label_styles_padding": "",
+                                        "label_styles_display": "",
+                                        "label_styles_float": "",
+                                        "label_styles_show_advanced_css": 0,
+                                        "label_styles_advanced": "",
+                                        "element_styles_background-color": "",
+                                        "element_styles_border": "",
+                                        "element_styles_border-style": "",
+                                        "element_styles_border-color": "",
+                                        "element_styles_color": "",
+                                        "element_styles_height": "",
+                                        "element_styles_width": "",
+                                        "element_styles_font-size": "",
+                                        "element_styles_margin": "",
+                                        "element_styles_padding": "",
+                                        "element_styles_display": "",
+                                        "element_styles_float": "",
+                                        "element_styles_show_advanced_css": 0,
+                                        "element_styles_advanced": "",
+                                        "cellcid": "c3277",
+                                        "field_label": "Name",
+                                        "field_key": "name",
+                                        "custom_name_attribute": "",
+                                        "personally_identifiable": "",
+                                        "value": "",
+                                        "id": 5,
+                                        "beforeField": "",
+                                        "afterField": "",
+                                        "parentType": "textbox",
+                                        "element_templates": ["textbox", "input"],
+                                        "old_classname": "",
+                                        "wrap_template": "wrap"
+                                    }, {
+                                        "objectType": "Field",
+                                        "objectDomain": "fields",
+                                        "editActive": false,
+                                        "order": 3,
+                                        "idAttribute": "id",
+                                        "type": "phone",
+                                        "label": "",
+                                        "key": "phone_1668223705098",
+                                        "label_pos": "above",
+                                        "required": false,
+                                        "default": "",
+                                        "placeholder": "\u0110i\u00ea\u0323n thoa\u0323i",
+                                        "container_class": "",
+                                        "element_class": "",
+                                        "input_limit": "",
+                                        "input_limit_type": "characters",
+                                        "input_limit_msg": "K\u00fd t\u1ef1 c\u00f2n l\u1ea1i",
+                                        "manual_key": false,
+                                        "admin_label": "",
+                                        "help_text": "",
+                                        "mask": "",
+                                        "custom_mask": "",
+                                        "custom_name_attribute": "phone",
+                                        "personally_identifiable": 1,
+                                        "value": "",
+                                        "id": 9,
+                                        "beforeField": "",
+                                        "afterField": "",
+                                        "parentType": "textbox",
+                                        "element_templates": ["tel", "textbox", "input"],
+                                        "old_classname": "",
+                                        "wrap_template": "wrap"
+                                    }, {
+                                        "objectType": "Field",
+                                        "objectDomain": "fields",
+                                        "editActive": false,
+                                        "order": 4,
+                                        "idAttribute": "id",
+                                        "type": "textbox",
+                                        "label": "",
+                                        "key": "textbox_1668223701752",
+                                        "label_pos": "above",
+                                        "required": false,
+                                        "default": "",
+                                        "placeholder": "N\u1ed9i dung",
+                                        "container_class": "",
+                                        "element_class": "",
+                                        "input_limit": "",
+                                        "input_limit_type": "characters",
+                                        "input_limit_msg": "K\u00fd t\u1ef1 c\u00f2n l\u1ea1i",
+                                        "manual_key": false,
+                                        "admin_label": "",
+                                        "help_text": "",
+                                        "mask": "",
+                                        "custom_mask": "",
+                                        "custom_name_attribute": "",
+                                        "personally_identifiable": "",
+                                        "value": "",
+                                        "drawerDisabled": false,
+                                        "id": 10,
+                                        "beforeField": "",
+                                        "afterField": "",
+                                        "parentType": "textbox",
+                                        "element_templates": ["textbox", "input"],
+                                        "old_classname": "",
+                                        "wrap_template": "wrap"
+                                    }, {
+                                        "objectType": "Field",
+                                        "objectDomain": "fields",
+                                        "editActive": false,
+                                        "order": 5,
+                                        "idAttribute": "id",
+                                        "label": "G\u1eecI TH\u00d4NG TIN",
+                                        "key": "g_i_thong_tin_1668223698238",
+                                        "type": "submit",
+                                        "created_at": "2016-08-24 16:39:20",
+                                        "processing_label": "Processing",
+                                        "container_class": "",
+                                        "element_class": "",
+                                        "wrap_styles_background-color": "",
+                                        "wrap_styles_border": "",
+                                        "wrap_styles_border-style": "",
+                                        "wrap_styles_border-color": "",
+                                        "wrap_styles_color": "",
+                                        "wrap_styles_height": "",
+                                        "wrap_styles_width": "",
+                                        "wrap_styles_font-size": "",
+                                        "wrap_styles_margin": "",
+                                        "wrap_styles_padding": "",
+                                        "wrap_styles_display": "",
+                                        "wrap_styles_float": "",
+                                        "wrap_styles_show_advanced_css": 0,
+                                        "wrap_styles_advanced": "",
+                                        "label_styles_background-color": "",
+                                        "label_styles_border": "",
+                                        "label_styles_border-style": "",
+                                        "label_styles_border-color": "",
+                                        "label_styles_color": "",
+                                        "label_styles_height": "",
+                                        "label_styles_width": "",
+                                        "label_styles_font-size": "",
+                                        "label_styles_margin": "",
+                                        "label_styles_padding": "",
+                                        "label_styles_display": "",
+                                        "label_styles_float": "",
+                                        "label_styles_show_advanced_css": 0,
+                                        "label_styles_advanced": "",
+                                        "element_styles_background-color": "",
+                                        "element_styles_border": "",
+                                        "element_styles_border-style": "",
+                                        "element_styles_border-color": "",
+                                        "element_styles_color": "",
+                                        "element_styles_height": "",
+                                        "element_styles_width": "",
+                                        "element_styles_font-size": "",
+                                        "element_styles_margin": "",
+                                        "element_styles_padding": "",
+                                        "element_styles_display": "",
+                                        "element_styles_float": "",
+                                        "element_styles_show_advanced_css": 0,
+                                        "element_styles_advanced": "",
+                                        "submit_element_hover_styles_background-color": "",
+                                        "submit_element_hover_styles_border": "",
+                                        "submit_element_hover_styles_border-style": "",
+                                        "submit_element_hover_styles_border-color": "",
+                                        "submit_element_hover_styles_color": "",
+                                        "submit_element_hover_styles_height": "",
+                                        "submit_element_hover_styles_width": "",
+                                        "submit_element_hover_styles_font-size": "",
+                                        "submit_element_hover_styles_margin": "",
+                                        "submit_element_hover_styles_padding": "",
+                                        "submit_element_hover_styles_display": "",
+                                        "submit_element_hover_styles_float": "",
+                                        "submit_element_hover_styles_show_advanced_css": 0,
+                                        "submit_element_hover_styles_advanced": "",
+                                        "cellcid": "c3287",
+                                        "field_label": "Submit",
+                                        "field_key": "submit",
+                                        "drawerDisabled": false,
+                                        "id": 8,
+                                        "beforeField": "",
+                                        "afterField": "",
+                                        "value": "",
+                                        "label_pos": "above",
+                                        "parentType": "textbox",
+                                        "element_templates": ["submit", "button", "input"],
+                                        "old_classname": "",
+                                        "wrap_template": "wrap-no-label"
+                                    }];
+                                    nfForms.push(form);
+                                </script>
+                            </section>
+                        </div>
+                        <div class="clearboth"></div>
+                    </div>
+                </div>
+
+                <div id="sub-footer">
+                    <div class=" mk-grid">
+
+                        <span class="mk-footer-copyright">Copyright All Rights Reserved &copy; 2017</span>
+                    </div>
+                    <div class="clearboth"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <style type='text/css'></style>
+    <style id="mk-shortcode-static-styles" type="text/css">
+        .sortable-id-2.sortable-outline-style {
+            background-color: #1a1a1a;
+            margin: 4px;
+            padding-left: 4px !important;
+            padding-right: 4px !important;
+        }
+
+        .sortable-id-2.sortable-outline-style a {
+            color: #cccccc;
+        }
+
+        .sortable-id-2.sortable-outline-style a.current {
+            border-color: #cccccc !important;
+        }
+    </style>
+    <script type="text/javascript">
+        php = {
+            hasAdminbar: false,
+            json: (null != null) ? null : "",
+            jsPath: '/wp-content/themes/jupiter/assets/js'
+        };
+    </script>
+    <link rel='stylesheet' id='js_composer_front-css'
+        href='/wp-content/plugins/js_composer_theme/assets/css/js_composer.min.css?ver=5.4.5' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='dashicons-css' href='/wp-includes/css/dashicons.min.css?ver=6.1.1' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='nf-display-css'
+        href='/wp-content/plugins/ninja-forms/assets/css/display-opinions-light.css?ver=6.1.1' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='nf-font-awesome-css'
+        href='/wp-content/plugins/ninja-forms/assets/css/font-awesome.min.css?ver=6.1.1' type='text/css' media='all' />
+    <script type='text/javascript' id='toc-front-js-extra'>
+        /* <![CDATA[ */
+        var tocplus = {
+            "visibility_show": "show",
+            "visibility_hide": "hide",
+            "width": "Auto"
+        };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='/wp-content/plugins/table-of-contents-plus/front.min.js?ver=2106'
+        id='toc-front-js'></script>
+    <script type='text/javascript' id='rocket-browser-checker-js-after'>
+        "use strict";
+        var _createClass = function () {
+            function defineProperties(target, props) {
+                for (var i = 0; i < props.length; i++) {
+                    var descriptor = props[i];
+                    descriptor.enumerable = descriptor.enumerable || !1, descriptor.configurable = !0, "value" in descriptor && (descriptor.writable = !0), Object.defineProperty(target, descriptor.key, descriptor)
+                }
+            }
+            return function (Constructor, protoProps, staticProps) {
+                return protoProps && defineProperties(Constructor.prototype, protoProps), staticProps && defineProperties(Constructor, staticProps), Constructor
+            }
+        }();
+
+        function _classCallCheck(instance, Constructor) {
+            if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function")
+        }
+        var RocketBrowserCompatibilityChecker = function () {
+            function RocketBrowserCompatibilityChecker(options) {
+                _classCallCheck(this, RocketBrowserCompatibilityChecker), this.passiveSupported = !1, this._checkPassiveOption(this), this.options = !!this.passiveSupported && options
+            }
+            return _createClass(RocketBrowserCompatibilityChecker, [{
+                key: "_checkPassiveOption",
+                value: function (self) {
+                    try {
+                        var options = {
+                            get passive() {
+                                return !(self.passiveSupported = !0)
+                            }
+                        };
+                        window.addEventListener("test", null, options), window.removeEventListener("test", null, options)
+                    } catch (err) {
+                        self.passiveSupported = !1
+                    }
+                }
+            }, {
+                key: "initRequestIdleCallback",
+                value: function () {
+                    !1 in window && (window.requestIdleCallback = function (cb) {
+                        var start = Date.now();
+                        return setTimeout(function () {
+                            cb({
+                                didTimeout: !1,
+                                timeRemaining: function () {
+                                    return Math.max(0, 50 - (Date.now() - start))
+                                }
+                            })
+                        }, 1)
+                    }), !1 in window && (window.cancelIdleCallback = function (id) {
+                        return clearTimeout(id)
+                    })
+                }
+            }, {
+                key: "isDataSaverModeOn",
+                value: function () {
+                    return "connection" in navigator && !0 === navigator.connection.saveData
+                }
+            }, {
+                key: "supportsLinkPrefetch",
+                value: function () {
+                    var elem = document.createElement("link");
+                    return elem.relList && elem.relList.supports && elem.relList.supports("prefetch") && window.IntersectionObserver && "isIntersecting" in IntersectionObserverEntry.prototype
+                }
+            }, {
+                key: "isSlowConnection",
+                value: function () {
+                    return "connection" in navigator && "effectiveType" in navigator.connection && ("2g" === navigator.connection.effectiveType || "slow-2g" === navigator.connection.effectiveType)
+                }
+            }]), RocketBrowserCompatibilityChecker
+        }();
+    </script>
+    <script type='text/javascript' id='rocket-delay-js-js-after'>
+        "use strict";
+        var _createClass = function () {
+            function i(e, t) {
+                for (var r = 0; r < t.length; r++) {
+                    var i = t[r];
+                    i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
+                }
+            }
+            return function (e, t, r) {
+                return t && i(e.prototype, t), r && i(e, r), e
+            }
+        }();
+
+        function _classCallCheck(e, t) {
+            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+        }
+        var RocketLazyLoadScripts = function () {
+            function r(e, t) {
+                _classCallCheck(this, r), this.attrName = "data-rocketlazyloadscript", this.browser = t, this.options = this.browser.options, this.triggerEvents = e, this.userEventListener = this.triggerListener.bind(this)
+            }
+            return _createClass(r, [{
+                key: "init",
+                value: function () {
+                    this._addEventListener(this)
+                }
+            }, {
+                key: "reset",
+                value: function () {
+                    this._removeEventListener(this)
+                }
+            }, {
+                key: "_addEventListener",
+                value: function (t) {
+                    this.triggerEvents.forEach(function (e) {
+                        return window.addEventListener(e, t.userEventListener, t.options)
+                    })
+                }
+            }, {
+                key: "_removeEventListener",
+                value: function (t) {
+                    this.triggerEvents.forEach(function (e) {
+                        return window.removeEventListener(e, t.userEventListener, t.options)
+                    })
+                }
+            }, {
+                key: "_loadScriptSrc",
+                value: function () {
+                    var r = this;
+                    document.querySelectorAll("script[" + this.attrName + "]").forEach(function (e) {
+                        var t = e.getAttribute(r.attrName);
+                        e.setAttribute("src", t), e.removeAttribute(r.attrName)
+                    }), this.reset()
+                }
+            }, {
+                key: "triggerListener",
+                value: function () {
+                    this._loadScriptSrc(), this._removeEventListener(this)
+                }
+            }], [{
+                key: "run",
+                value: function () {
+                    if (RocketBrowserCompatibilityChecker) {
+                        new r(["keydown", "mouseover", "touchmove", "touchstart"], new RocketBrowserCompatibilityChecker({
+                            passive: !0
+                        })).init()
+                    }
+                }
+            }]), r
+        }();
+        RocketLazyLoadScripts.run();
+    </script>
+    <script type='text/javascript' src='/wp-content/themes/jupiter/assets/js/min/full-scripts.6.1.6.js?ver=1668066254'
+        id='theme-scripts-js'></script>
+    <script type='text/javascript'
+        src='/wp-content/themes/jupiter/header-builder/includes/assets/js/mkhb-render.js?ver=6.1.6'
+        id='mkhb-render-js'></script>
+    <script type='text/javascript'
+        src='/wp-content/themes/jupiter/header-builder/includes/assets/js/mkhb-column.js?ver=6.1.6'
+        id='mkhb-column-js'></script>
+    <script type='text/javascript'
+        src='/wp-content/plugins/js_composer_theme/assets/js/dist/js_composer_front.min.js?ver=5.4.5'
+        id='wpb_composer_front_js-js'></script>
+    <script type='text/javascript' src='/wp-includes/js/underscore.min.js?ver=1.13.4' id='underscore-js'></script>
+    <script type='text/javascript' src='/wp-includes/js/backbone.min.js?ver=1.4.1' id='backbone-js'></script>
+    <script type='text/javascript' src='/wp-content/plugins/ninja-forms/assets/js/min/front-end-deps.js?ver=3.6.14'
+        id='nf-front-end-deps-js'></script>
+    <script type='text/javascript' id='nf-front-end-js-extra'>
+        /* <![CDATA[ */
+        var nfi18n = {
+            "ninjaForms": "Ninja Forms",
+            "changeEmailErrorMsg": "H\u00e3y nh\u1eadp m\u1ed9t \u0111\u1ecba ch\u1ec9 email h\u1ee3p l\u1ec7!",
+            "changeDateErrorMsg": "Please enter a valid date!",
+            "confirmFieldErrorMsg": "Nh\u1eefng tr\u01b0\u1eddng n\u00e0y ph\u1ea3i kh\u1edbp!",
+            "fieldNumberNumMinError": "L\u1ed7i s\u1ed1 t\u1ed1i thi\u1ec3u",
+            "fieldNumberNumMaxError": "L\u1ed7i s\u1ed1 t\u1ed1i \u0111a",
+            "fieldNumberIncrementBy": "H\u00e3y t\u0103ng theo ",
+            "fieldTextareaRTEInsertLink": "Ch\u00e8n li\u00ean k\u1ebft",
+            "fieldTextareaRTEInsertMedia": "Ch\u00e8n ph\u01b0\u01a1ng ti\u1ec7n",
+            "fieldTextareaRTESelectAFile": "Ch\u1ecdn t\u1eadp tin",
+            "formErrorsCorrectErrors": "H\u00e3y s\u1eeda l\u1ed7i tr\u01b0\u1edbc khi g\u1eedi m\u1eabu n\u00e0y.",
+            "formHoneypot": "N\u1ebfu b\u1ea1n l\u00e0 ng\u01b0\u1eddi \u0111ang xem tr\u01b0\u1eddng n\u00e0y, h\u00e3y \u0111\u1ec3 tr\u1ed1ng n\u00f3.",
+            "validateRequiredField": "\u0110\u00e2y l\u00e0 m\u1ed9t tr\u01b0\u1eddng b\u1eaft bu\u1ed9c.",
+            "honeypotHoneypotError": "L\u1ed7i Honeypot",
+            "fileUploadOldCodeFileUploadInProgress": "\u0110ang t\u1ea3i t\u1eadp tin l\u00ean.",
+            "fileUploadOldCodeFileUpload": "T\u1ea2I T\u1eacP TIN L\u00caN",
+            "currencySymbol": "",
+            "fieldsMarkedRequired": "C\u00e1c tr\u01b0\u1eddng \u0111\u01b0\u1ee3c \u0111\u00e1nh d\u1ea5u <span class=\"ninja-forms-req-symbol\">*<\/span> l\u00e0 b\u1eaft bu\u1ed9c",
+            "thousands_sep": ".",
+            "decimal_point": ",",
+            "siteLocale": "vi",
+            "dateFormat": "m\/d\/Y",
+            "startOfWeek": "1",
+            "of": "c\u1ee7a",
+            "previousMonth": "Previous Month",
+            "nextMonth": "Next Month",
+            "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            "monthsShort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            "weekdays": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "weekdaysShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+            "weekdaysMin": ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+            "recaptchaConsentMissing": "reCapctha validation couldn't load.",
+            "recaptchaMissingCookie": "reCaptcha v3 validation couldn't load the cookie needed to submit the form.",
+            "recaptchaConsentEvent": "Accept reCaptcha cookies before sending the form."
+        };
+        var nfFrontEnd = {
+            "adminAjax": "http:\/\/www.chothuexetaibinhduong.com\/wp-admin\/admin-ajax.php",
+            "ajaxNonce": "3dfecc6608",
+            "requireBaseUrl": "http:\/\/www.chothuexetaibinhduong.com\/wp-content\/plugins\/ninja-forms\/assets\/js\/",
+            "use_merge_tags": {
+                "user": {
+                    "address": "address",
+                    "textbox": "textbox",
+                    "button": "button",
+                    "checkbox": "checkbox",
+                    "city": "city",
+                    "confirm": "confirm",
+                    "date": "date",
+                    "email": "email",
+                    "firstname": "firstname",
+                    "html": "html",
+                    "hidden": "hidden",
+                    "lastname": "lastname",
+                    "listcheckbox": "listcheckbox",
+                    "listcountry": "listcountry",
+                    "listimage": "listimage",
+                    "listmultiselect": "listmultiselect",
+                    "listradio": "listradio",
+                    "listselect": "listselect",
+                    "liststate": "liststate",
+                    "note": "note",
+                    "number": "number",
+                    "password": "password",
+                    "passwordconfirm": "passwordconfirm",
+                    "product": "product",
+                    "quantity": "quantity",
+                    "recaptcha": "recaptcha",
+                    "recaptcha_v3": "recaptcha_v3",
+                    "repeater": "repeater",
+                    "shipping": "shipping",
+                    "spam": "spam",
+                    "starrating": "starrating",
+                    "submit": "submit",
+                    "terms": "terms",
+                    "textarea": "textarea",
+                    "total": "total",
+                    "unknown": "unknown",
+                    "zip": "zip",
+                    "hr": "hr"
+                },
+                "post": {
+                    "address": "address",
+                    "textbox": "textbox",
+                    "button": "button",
+                    "checkbox": "checkbox",
+                    "city": "city",
+                    "confirm": "confirm",
+                    "date": "date",
+                    "email": "email",
+                    "firstname": "firstname",
+                    "html": "html",
+                    "hidden": "hidden",
+                    "lastname": "lastname",
+                    "listcheckbox": "listcheckbox",
+                    "listcountry": "listcountry",
+                    "listimage": "listimage",
+                    "listmultiselect": "listmultiselect",
+                    "listradio": "listradio",
+                    "listselect": "listselect",
+                    "liststate": "liststate",
+                    "note": "note",
+                    "number": "number",
+                    "password": "password",
+                    "passwordconfirm": "passwordconfirm",
+                    "product": "product",
+                    "quantity": "quantity",
+                    "recaptcha": "recaptcha",
+                    "recaptcha_v3": "recaptcha_v3",
+                    "repeater": "repeater",
+                    "shipping": "shipping",
+                    "spam": "spam",
+                    "starrating": "starrating",
+                    "submit": "submit",
+                    "terms": "terms",
+                    "textarea": "textarea",
+                    "total": "total",
+                    "unknown": "unknown",
+                    "zip": "zip",
+                    "hr": "hr"
+                },
+                "system": {
+                    "address": "address",
+                    "textbox": "textbox",
+                    "button": "button",
+                    "checkbox": "checkbox",
+                    "city": "city",
+                    "confirm": "confirm",
+                    "date": "date",
+                    "email": "email",
+                    "firstname": "firstname",
+                    "html": "html",
+                    "hidden": "hidden",
+                    "lastname": "lastname",
+                    "listcheckbox": "listcheckbox",
+                    "listcountry": "listcountry",
+                    "listimage": "listimage",
+                    "listmultiselect": "listmultiselect",
+                    "listradio": "listradio",
+                    "listselect": "listselect",
+                    "liststate": "liststate",
+                    "note": "note",
+                    "number": "number",
+                    "password": "password",
+                    "passwordconfirm": "passwordconfirm",
+                    "product": "product",
+                    "quantity": "quantity",
+                    "recaptcha": "recaptcha",
+                    "recaptcha_v3": "recaptcha_v3",
+                    "repeater": "repeater",
+                    "shipping": "shipping",
+                    "spam": "spam",
+                    "starrating": "starrating",
+                    "submit": "submit",
+                    "terms": "terms",
+                    "textarea": "textarea",
+                    "total": "total",
+                    "unknown": "unknown",
+                    "zip": "zip",
+                    "hr": "hr"
+                },
+                "fields": {
+                    "address": "address",
+                    "textbox": "textbox",
+                    "button": "button",
+                    "checkbox": "checkbox",
+                    "city": "city",
+                    "confirm": "confirm",
+                    "date": "date",
+                    "email": "email",
+                    "firstname": "firstname",
+                    "html": "html",
+                    "hidden": "hidden",
+                    "lastname": "lastname",
+                    "listcheckbox": "listcheckbox",
+                    "listcountry": "listcountry",
+                    "listimage": "listimage",
+                    "listmultiselect": "listmultiselect",
+                    "listradio": "listradio",
+                    "listselect": "listselect",
+                    "liststate": "liststate",
+                    "note": "note",
+                    "number": "number",
+                    "password": "password",
+                    "passwordconfirm": "passwordconfirm",
+                    "product": "product",
+                    "quantity": "quantity",
+                    "recaptcha": "recaptcha",
+                    "recaptcha_v3": "recaptcha_v3",
+                    "repeater": "repeater",
+                    "shipping": "shipping",
+                    "spam": "spam",
+                    "starrating": "starrating",
+                    "submit": "submit",
+                    "terms": "terms",
+                    "textarea": "textarea",
+                    "total": "total",
+                    "unknown": "unknown",
+                    "zip": "zip",
+                    "hr": "hr"
+                },
+                "calculations": {
+                    "html": "html",
+                    "hidden": "hidden",
+                    "note": "note",
+                    "unknown": "unknown"
+                }
+            },
+            "opinionated_styles": "light",
+            "filter_esc_status": "false",
+            "nf_consent_status_response": []
+        };
+        var nfRepeater = {
+            "add_repeater_child_field_text": "Add "
+        };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='/wp-content/plugins/ninja-forms/assets/js/min/front-end.js?ver=3.6.14'
+        id='nf-front-end-js'></script>
+    <script type="text/javascript">
+        window.get = {};
+        window.get.captcha = function (enteredCaptcha) {
+            return jQuery.get(ajaxurl, {
+                action: "mk_validate_captcha_input",
+                captcha: enteredCaptcha
+            });
+        };
+    </script>
+    <script id="tmpl-nf-layout" type="text/template">
+        <span id="nf-form-title-{{{ data.id }}}" class="nf-form-title">
+		{{{ ( 1 == data.settings.show_title ) ? '<h3>' + data.settings.title + '</h3>' : '' }}}
+	</span>
+        <div class="nf-form-wrap ninja-forms-form-wrap">
+            <div class="nf-response-msg"></div>
+            <div class="nf-debug-msg"></div>
+            <div class="nf-before-form"></div>
+            <div class="nf-form-layout"></div>
+            <div class="nf-after-form"></div>
+        </div>
+    </script>
+
+    <script id="tmpl-nf-empty" type="text/template">
+
+    </script>
+    <script id="tmpl-nf-before-form" type="text/template">
+        {{{ data.beforeForm }}}
+    </script>
+    <script id="tmpl-nf-after-form" type="text/template">
+        {{{ data.afterForm }}}
+    </script>
+    <script id="tmpl-nf-before-fields" type="text/template">
+        <div class="nf-form-fields-required">{{{ data.renderFieldsMarkedRequired() }}}</div>
+        {{{ data.beforeFields }}}
+    </script>
+    <script id="tmpl-nf-after-fields" type="text/template">
+        {{{ data.afterFields }}}
+        <div id="nf-form-errors-{{{ data.id }}}" class="nf-form-errors" role="alert"></div>
+        <div class="nf-form-hp"></div>
+    </script>
+    <script id="tmpl-nf-before-field" type="text/template">
+        {{{ data.beforeField }}}
+    </script>
+    <script id="tmpl-nf-after-field" type="text/template">
+        {{{ data.afterField }}}
+    </script>
+    <script id="tmpl-nf-form-layout" type="text/template">
+        <form>
+            <div>
+                <div class="nf-before-form-content"></div>
+                <div class="nf-form-content {{{ data.element_class }}}"></div>
+                <div class="nf-after-form-content"></div>
+            </div>
+        </form>
+    </script>
+    <script id="tmpl-nf-form-hp" type="text/template">
+        <label for="nf-field-hp-{{{ data.id }}}" aria-hidden="true">
+		{{{ nfi18n.formHoneypot }}}
+		<input id="nf-field-hp-{{{ data.id }}}" name="nf-field-hp" class="nf-element nf-field-hp" type="text" value=""/>
+	</label>
+    </script>
+    <script id="tmpl-nf-field-layout" type="text/template">
+        <div id="nf-field-{{{ data.id }}}-container" class="nf-field-container {{{ data.type }}}-container {{{ data.renderContainerClass() }}}">
+            <div class="nf-before-field"></div>
+            <div class="nf-field"></div>
+            <div class="nf-after-field"></div>
+        </div>
+    </script>
+    <script id="tmpl-nf-field-before" type="text/template">
+        {{{ data.beforeField }}}
+    </script>
+    <script id="tmpl-nf-field-after" type="text/template">
+        <# /* * Render our input limit section if that setting exists. */ #>
+            <div class="nf-input-limit"></div>
+            <# /* * Render our error section if we have an error. */ #>
+                <div id="nf-error-{{{ data.id }}}" class="nf-error-wrap nf-error" role="alert"></div>
+                <# /* * Render any custom HTML after our field. */ #>
+                    {{{ data.afterField }}}
+    </script>
+    <script id="tmpl-nf-field-wrap" type="text/template">
+        <div id="nf-field-{{{ data.id }}}-wrap" class="{{{ data.renderWrapClass() }}}" data-field-id="{{{ data.id }}}">
+            <# /* * This is our main field template. It 's called for every field type.
+		 * Note that must have ONE top-level, wrapping element. i.e. a div/span/etc that wraps all of the template.
+		 */
+        #>
+		<#
+		/*
+		 * Render our label.
+		 */
+        #>
+		{{{ data.renderLabel() }}}
+		<#
+		/*
+		 * Render our field element. Uses the template for the field being rendered.
+		 */
+        #>
+		<div class="nf-field-element">{{{ data.renderElement() }}}</div>
+		<#
+		/*
+		 * Render our Description Text.
+		 */
+        #>
+		{{{ data.renderDescText() }}}
+	</div>
+</script>
+    <script id="tmpl-nf-field-wrap-no-label" type="text/template">
+    <div id="nf-field-{{{ data.id }}}-wrap" class="{{{ data.renderWrapClass() }}}" data-field-id="{{{ data.id }}}">
+        <div class="nf-field-label"></div>
+        <div class="nf-field-element">{{{ data.renderElement() }}}</div>
+        <div class="nf-error-wrap"></div>
+    </div>
+</script>
+    <script id="tmpl-nf-field-wrap-no-container" type="text/template">
+
+        {{{ data.renderElement() }}}
+
+        <div class="nf-error-wrap"></div>
+</script>
+    <script id="tmpl-nf-field-label" type="text/template">
+	<div class="nf-field-label"><label for="nf-field-{{{ data.id }}}"
+	                                   id="nf-label-field-{{{ data.id }}}"
+	                                   class="{{{ data.renderLabelClasses() }}}">{{{ ( data.maybeFilterHTML() === 'true ' ) ? _.escape( data.label ) : data.label }}} {{{ ( 'undefined ' != typeof data.required && 1 == data.required ) ? '<span class="ninja-forms-req-symbol">*</span>' : '' }}} {{{ data.maybeRenderHelp() }}}</label>
+        </div>
+    </script>
+    <script id="tmpl-nf-field-error" type="text/template">
+        <div class="nf-error-msg nf-error-{{{ data.id }}}">{{{ data.msg }}}</div>
+    </script>
+    <script id="tmpl-nf-form-error" type="text/template">
+        <div class="nf-error-msg nf-error-{{{ data.id }}}">{{{ data.msg }}}</div>
+    </script>
+    <script id="tmpl-nf-field-input-limit" type="text/template">
+        {{{ data.currentCount() }}} {{{ nfi18n.of }}} {{{ data.input_limit }}} {{{ data.input_limit_msg }}}
+    </script>
+    <script id="tmpl-nf-field-null" type="text/template">
+    </script>
+    <script id="tmpl-nf-field-textbox" type="text/template">
+        <input type="text" value="{{{ _.escape( data.value ) }}}" class="{{{ data.renderClasses() }}} nf-element" {{{ data.renderPlaceholder() }}} {{{ data.maybeDisabled() }}} {{{ data.maybeInputLimit() }}} id="nf-field-{{{ data.id }}}" <# if( ! data.disable_browser_autocomplete
+            && -1 < [ 'city', 'zip' ].indexOf( data.type ) ){ #> name="{{ data.custom_name_attribute || 'nf-field-' + data.id + '-' + data.type }}" autocomplete="on"
+        <# } else { #>
+            name="{{ data.custom_name_attribute || 'nf-field-' + data.id }}" {{{ data.maybeDisableAutocomplete() }}}
+            <# } #>
+
+                aria-invalid="false" aria-describedby="nf-error-{{{ data.id }}}" aria-labelledby="nf-label-field-{{{ data.id }}}" {{{ data.maybeRequired() }}} >
+    </script>
+    <script id='tmpl-nf-field-input' type='text/template'>
+        <input id="nf-field-{{{ data.id }}}" name="nf-field-{{{ data.id }}}" aria-invalid="false" aria-describedby="nf-error-{{{ data.id }}}" class="{{{ data.renderClasses() }}} nf-element" type="text" value="{{{ _.escape( data.value ) }}}" {{{ data.renderPlaceholder()
+            }}} {{{ data.maybeDisabled() }}} aria-labelledby="nf-label-field-{{{ data.id }}}" {{{ data.maybeRequired() }}}>
+    </script>
+    <script id="tmpl-nf-field-tel" type="text/template">
+        <input type="tel" value="{{{ _.escape( data.value ) }}}" class="{{{ data.renderClasses() }}} nf-element" id="nf-field-{{{ data.id }}}" <# if( ! data.disable_browser_autocompletes ){ #> name="{{ data.custom_name_attribute || 'nf-field-' + data.id
+        + '-' + data.type }}" autocomplete="tel"
+        <# } else { #>
+            name="{{ data.custom_name_attribute || 'nf-field-' + data.id }}" {{{ data.maybeDisableAutocomplete() }}}
+            <# } #>
+                {{{ data.renderPlaceholder() }}} aria-invalid="false" aria-describedby="nf-error-{{{ data.id }}}" aria-labelledby="nf-label-field-{{{ data.id }}}" {{{ data.maybeRequired() }}} >
+    </script>
+    <script id="tmpl-nf-field-submit" type="text/template">
+        <input id="nf-field-{{{ data.id }}}" class="{{{ data.renderClasses() }}} nf-element " type="button" value="{{{ ( data.maybeFilterHTML() === 'true' ) ? _.escape( data.label ) : data.label }}}" {{{ ( data.disabled ) ? 'disabled' : '' }}}>
+    </script>
+    <script id='tmpl-nf-field-button' type='text/template'>
+        <button id="nf-field-{{{ data.id }}}" name="nf-field-{{{ data.id }}}" class="{{{ data.classes }}} nf-element">
+        {{{ ( data.maybeFilterHTML() === 'true' ) ? _.escape( data.label ) : data.label }}}
+    </button>
+    </script>
+
+</body>
+
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1675843149 -->

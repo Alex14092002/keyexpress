@@ -1,0 +1,17 @@
+.nf-field-element {
+	.date-and-time {
+		margin-bottom: 5px;
+	}
+	.hour {
+		padding: 5px;
+		border-right: 0;
+	}
+	.minute {
+		padding: 5px;
+		border-left: 0;
+	}
+	.ampm {
+		padding: 5px;
+		border-left: 0;
+	}
+}

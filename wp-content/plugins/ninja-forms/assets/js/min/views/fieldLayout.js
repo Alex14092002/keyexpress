@@ -1,0 +1,72 @@
+define('views/fieldLayout', ['views/fieldItem', 'views/beforeField', 'views/afterField', 'views/fieldRepeaterLayout'], function(fieldItem, beforeField, afterField, repeaterFieldLayout) {
+
+    var view = Marionette.LayoutView.extend({
+        tagName: 'nf-field',
+
+        regions: {
+            beforeField: '.nf-before-field',
+            field: '.nf-field',
+            afterField: '.nf-after-field',
+        },
+
+        initialize: function() {
+            this.listenTo(this.model, 'change:visible', this.render, this);
+        },
+
+        getTemplate: function() {
+            if (this.model.get('visible')) {
+                return '#tmpl-nf-field-layout';
+            } else {
+                return '#tmpl-nf-empty';
+            }
+        },
+
+        onRender: function() {
+            if (this.model.get('visible')) {
+                this.beforeField.show(new beforeField({
+                    model: this.model
+                }));
+                if ('repeater' == this.model.get('type')) {
+                    this.field.show(new repeaterFieldLayout({
+                        model: this.model
+                    }));
+                } else {
+                    this.field.show(new fieldItem({
+                        model: this.model
+                    }));
+                }
+                this.afterField.show(new afterField({
+                    model: this.model
+                }));
+            }
+        },
+
+        templateHelpers: function() {
+            return {
+                renderContainerClass: function() {
+                    var containerClass = ' label-' + this.label_pos + ' ';
+                    // If we have a description position, add that to our container.
+                    if ('undefined' != typeof this.desc_pos) {
+                        containerClass += 'desc-' + this.desc_pos + ' ';
+                    }
+                    // if we have a container_class field setting, add that to our container.
+                    if ('undefined' != typeof this.container_class && 0 < jQuery.trim(this.container_class).length) {
+                        containerClass += this.container_class + ' ';
+                    }
+
+                    //check if the parent type and type are different. If
+                    // so, add parent type container styling
+
+                    if (this.type !== this.parentType) {
+                        containerClass += ' ' + this.parentType + '-container';
+                    }
+
+                    return containerClass;
+                }
+            }
+        }
+
+    });
+
+    return view;
+});
